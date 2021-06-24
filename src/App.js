@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Form from './components/Form';
+import CV from './components/CV';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+const App = () => (
+  <>
+  <Router>
+    <div>
+      <h2>CV generator</h2>
+      <ul className="navbar-nav mr-auto">
+            <li><Link to={'/form'} className="nav-link"> Form </Link></li>
+            <li><Link to={'/cv'} className="nav-link">CV</Link></li>
+          </ul>
+          <Switch>
+              <Route exact path='/form' component={Form} />
+              <Route path='/cv' component={CV} />
+          </Switch>
     </div>
-  );
-}
+    </Router>
+  </>
+);
 
 export default App;
