@@ -3,14 +3,14 @@ import styles from './style.module.css';
 
 const Form = () => (
     <>
-    <div>
-      <h2>Form</h2>
-      <div className= {styles.formContainer}>
-          <div className={styles.headerContainer}> Header</div>
-          <div className={styles.bodyContainer}>Body</div>
-          <div className={styles.footerContainer}>Footer</div>  
+          <div className= {styles.formContainer}>
+          <div className= {styles.form}>
+          <h2>Personal Information</h2>
+            <form>
+
+            </form>
+          </div>
       </div>
-    </div>
   </>
 );
 
