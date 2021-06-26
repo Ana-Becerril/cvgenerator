@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import styles from './style.module.css'
 import Switch from "react-switch";
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
+import { useHistory, useLocation } from 'react-router-dom';
 
 const Header = () => {
-  let location = useLocation();
+  const location = useLocation();
   const history = useHistory();
+  
   const [checked, setChecked] = useState(false);
   const handleChange = nextChecked => {
     setChecked(nextChecked);

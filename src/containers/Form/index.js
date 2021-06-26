@@ -1,11 +1,10 @@
 import React from 'react';
 import styles from './style.module.css';
-import Header from '../Header'
 
 const Form = () => (
     <>
     <div>
-      <Header/>
+      <h2>Form</h2>
       <div className= {styles.formContainer}>
           <div className={styles.headerContainer}> Header</div>
           <div className={styles.bodyContainer}>Body</div>
