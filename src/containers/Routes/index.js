@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Form from '../Form/index';
-import CV from '../CV/index';
+import Form from '../Form';
+import CV from '../CV';
 import Header from '../Header'
 
 

@@ -1,11 +1,19 @@
 import React from 'react';
+import styles from './style.module.css';
+import Form from '../Form'
 
 
 const CV = () => (
-    <>
+  <>
     <div>
-      <h2>CV</h2>
+      <div className={styles.formContainer}>
+        <div className={styles.form}>
+          <h2>CV</h2>
+     
+        </div>
+      </div>
     </div>
+
   </>
 );
 

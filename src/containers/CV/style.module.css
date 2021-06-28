@@ -25,26 +25,3 @@ h2{
     margin: 15px;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 20px;
-}
-
-input{
-    height: 23px;
-}
-
-button{
-    margin-top: 10px;
-    height: 25px;
-    background-color: #9052aa;
-    border: none;
-    border-radius: 5px;
-}
-
-button:hover{
-    color: #d6bcfa;
-}
-
