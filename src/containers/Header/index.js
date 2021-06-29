@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './style.module.css'
 import Switch from "react-switch";
-import CV from "../CV"
-import Form from "../Form"
 
-const Header = () => {
-  
-  const [checked, setChecked] = useState(false);
-  const handleChange = nextChecked => {
-    setChecked(nextChecked);
-  };
+const Header = ({checked, handleChange}) => {
+
 
   return (
     <>
