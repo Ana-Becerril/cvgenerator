@@ -9,7 +9,6 @@ const Input = ({ type= "text", placeholder, onChange, value }) => {
       type={type}
       placeholder={placeholder}
       value={value}
-      className={styles.input}
     />
   );
 };

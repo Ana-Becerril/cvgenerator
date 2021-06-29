@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import styles from './style.module.css'
 import Switch from "react-switch";
-import { useHistory, useLocation } from 'react-router-dom';
+import CV from "../CV"
+import Form from "../Form"
 
 const Header = () => {
-  const location = useLocation();
-  const history = useHistory();
   
   const [checked, setChecked] = useState(false);
   const handleChange = nextChecked => {
     setChecked(nextChecked);
-    if (location.pathname === '/') history.push('/cv')
-    if (location.pathname === '/cv') history.push('/')
-
   };
 
   return (

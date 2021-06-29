@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './style.module.css';
+import HeaderName from './HeaderName';
 import Education from './Education';
 
 const Form = () => {
@@ -9,10 +10,14 @@ const Form = () => {
     <div>
       <div className={styles.formContainer}>
         <div className={styles.form}>
-          <h2>Personal Information</h2>
-          <form>
+          <div className={styles.mainContainers}>
+            <div className={styles.left}>
+            <HeaderName/>
+            </div>
+            <div className={styles.right}>
             <Education/>
-          </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
