@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './style.module.css';
+import Education from './Education';
 
 const Form = () => {
 
@@ -10,10 +11,7 @@ const Form = () => {
         <div className={styles.form}>
           <h2>Personal Information</h2>
           <form>
-           
-            <button type="submit">
-              Add 
-            </button>
+            <Education/>
           </form>
         </div>
       </div>

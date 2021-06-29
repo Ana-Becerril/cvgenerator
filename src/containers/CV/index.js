@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './style.module.css';
-import Form from '../Form'
 
 
 const CV = () => (

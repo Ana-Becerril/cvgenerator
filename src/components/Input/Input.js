@@ -2,12 +2,11 @@ import React from "react";
 import styles from './style.module.css';
 
 
-const Input = ({ type, name, placeholder, onChange, value }) => {
+const Input = ({ type= "text", placeholder, onChange, value }) => {
   return (
-    <InputWrapper
+    <input
       onChange={onChange}
       type={type}
-      name={name}
       placeholder={placeholder}
       value={value}
       className={styles.input}
