@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Input from "../../components/Input/Input";
 
 const Education = () => {
-    const [universityValue, setUniversityValue] = useState("");
-    const [cityValue, setCityValue] = useState("");
-    const [degreeValue, setDegreeValue] = useState("");
-    const [subjectValue, setSubjectValue] = useState("");
-    const [fromValue, setfromValue] = useState("");
-    const [toValue, setToValue] = useState("");
+    const [universityValue, setUniversityValue] = useState();
+    const [cityValue, setCityValue] = useState();
+    const [degreeValue, setDegreeValue] = useState();
+    const [subjectValue, setSubjectValue] = useState();
+    const [fromValue, setfromValue] = useState();
+    const [toValue, setToValue] = useState();
 
     const handleChange = (fn,e) => {
         fn(e.target.value);

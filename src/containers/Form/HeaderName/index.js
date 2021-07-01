@@ -1,14 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './style.module.css';
 import Input from '../../../components/Input/Input';
 
-const HeaderName = () => {
+const HeaderName = ({handleChange, firstNameValue, lastNameValue, currentRoleValue}) => {
 
-    const [firstNameValue, setfirstNameValue] = useState("");
-    const [lastNameValue, setLastNameValue] = useState("");
-    const [currentRoleValue, setCurrentRoleValue] = useState("");
-
-    const handleChange = (fn,e) => {
+    const valueChange = (fn,e) => {
         fn(e.target.value);
     };
 
@@ -16,24 +12,25 @@ const HeaderName = () => {
         <>
             <div>
                 <div className={styles.headerContainer}>
+                <form>
                     <Input
-                        onChange={(e) => handleChange(setfirstNameValue, e)}
+                        onChange={handleChange} 
                         placeholder="First Name"
                         value={firstNameValue}
                         className={styles.nameInput} />
                     
                     <Input
-                        onChange={(e) => handleChange(setLastNameValue, e)}
+                        onChange={handleChange}
                         placeholder="Last Name"
                         value={lastNameValue} 
                         className={styles.nameInput} />
 
                     <Input
-                        onChange={(e) => handleChange(setCurrentRoleValue, e)}
+                        onChange={handleChange}
                         placeholder="Current Role"
                         value={currentRoleValue} 
                         className={styles.nameInput} />
-
+                </form>
                 </div>
     </div>
   </>

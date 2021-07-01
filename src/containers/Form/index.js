@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './style.module.css';
 import HeaderName from './HeaderName';
-import Education from './Education';
 
-const Form = () => {
+
+const Form = ({onChange, firstNameValue, lastNameValue, currentRoleValue}) => {
 
   return (
   <>
@@ -12,10 +12,14 @@ const Form = () => {
         <div className={styles.form}>
           <div className={styles.mainContainers}>
             <div className={styles.left}>
-            <HeaderName/>
+            <HeaderName
+            handleChange={onChange}
+            firstNameValue={firstNameValue}
+            lastNameValue={lastNameValue}
+            currentRoleValue={currentRoleValue}
+            />
             </div>
             <div className={styles.right}>
-            <Education/>
             </div>
           </div>
         </div>
