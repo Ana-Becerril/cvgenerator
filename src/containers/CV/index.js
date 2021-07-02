@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './style.module.css';
-import HeaderName from '../Form/HeaderName';
 
-const CV = () => {
+const CV = ({datos}) => {
+
+
 
   return (
   <>
@@ -10,11 +11,12 @@ const CV = () => {
       <div className={styles.formContainer}>
         <div className={styles.form}>
           <div className={styles.mainContainers}>
-            <div className={styles.left}>
-            <HeaderName/>
-            </div>
-            <div className={styles.right}>
-            </div>
+           <div>{datos.firstName}</div>
+           <div>{datos.lastName}</div>
+           <div>{datos.role}</div>
+           <div>{datos.address}</div>
+           <div>{datos.email}</div>
+           <div>{datos.phone}</div>
           </div>
         </div>
       </div>

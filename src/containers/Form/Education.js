@@ -1,46 +1,69 @@
-import React, { useState } from "react";
-import Input from "../../components/Input/Input";
+import React from "react";
 
-const Education = () => {
-    const [universityValue, setUniversityValue] = useState();
-    const [cityValue, setCityValue] = useState();
-    const [degreeValue, setDegreeValue] = useState();
-    const [subjectValue, setSubjectValue] = useState();
-    const [fromValue, setfromValue] = useState();
-    const [toValue, setToValue] = useState();
-
-    const handleChange = (fn,e) => {
-        fn(e.target.value);
-    };
+const Education = ({ handleInputChange }) => {
 
     return (
         <>
-            <Input
-                onChange={(e) => handleChange(setUniversityValue,e)}
-                placeholder="University Name"
-                value={universityValue} />
-            <Input
-                onChange={(e) => handleChange(setCityValue,e)}
-                placeholder="City"
-                value={cityValue} />
-            <Input
-                onChange={(e) => handleChange(setDegreeValue,e)}
-                placeholder="Degree"
-                value={degreeValue} />
-            <Input
-                onChange={(e) => handleChange(setSubjectValue,e)}
-                placeholder="Subject"
-                value={subjectValue} />
-            <Input
-                onChange={(e) => handleChange(setfromValue,e)}
-                placeholder="From"
-                value={fromValue} />
-            <Input
-                onChange={(e) => handleChange(setToValue,e)}
-                placeholder="To"
-                value={toValue} />
+            <form onSubmit={e => e.preventDefault}>
+
+                <h1>Education</h1>
+
+                <input
+                    type="text"
+                    placeholder="University Name"
+                    onChange={handleInputChange}
+                    name="university" />
+                <input
+                    type="text"
+                    placeholder="City"
+                    onChange={handleInputChange}
+                    name="cityEducation"
+                />
+                <input
+                    type="text"
+                    placeholder="Degree"
+                    onChange={handleInputChange}
+                    name="degree"
+                />
+                <input
+                    type="text"
+                    placeholder="Subject"
+                    onChange={handleInputChange}
+                    name="subject"
+                />
+                <input
+                    type="text"
+                    placeholder="From"
+                    onChange={handleInputChange}
+                    name="fromEducatiom"
+                />
+                <input
+                    type="text"
+                    placeholder="To"
+                    onChange={handleInputChange}
+                    name="toEducation"
+                />
+
+                <button>
+                    Add
+                </button>
+                <button>
+                    Delete
+                </button>
+
+            </form>
+            {/* <ul>
+                <li>{datos.firstName}</li>
+                <li>{datos.lastName}</li>
+                <li>{datos.role}</li>
+                <li>{datos.address}</li>
+                <li>{datos.email}</li>
+                <li>{datos.phone}</li>
+            </ul> */}
+
         </>
     );
 };
+
 
 export default Education;

@@ -1,30 +1,22 @@
 import React from 'react';
 import styles from './style.module.css';
 import HeaderName from './HeaderName';
+import Experience from './Experience';
+import Education from './Education';
 
 
-const Form = ({onChange, firstNameValue, lastNameValue, currentRoleValue}) => {
+const Form = ({handleInputChange}) => {
 
   return (
   <>
-    <div>
-      <div className={styles.formContainer}>
-        <div className={styles.form}>
-          <div className={styles.mainContainers}>
-            <div className={styles.left}>
-            <HeaderName
-            handleChange={onChange}
-            firstNameValue={firstNameValue}
-            lastNameValue={lastNameValue}
-            currentRoleValue={currentRoleValue}
-            />
-            </div>
-            <div className={styles.right}>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div className={styles.formContainer}>
+   <HeaderName 
+   onChange={handleInputChange}/>
+   <Experience 
+   onChange={handleInputChange}/>
+   <Education
+   onChange={handleInputChange}/>
+   </div>
   </>
   );
 };

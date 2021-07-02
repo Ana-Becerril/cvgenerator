@@ -1,40 +1,58 @@
-import React from 'react';
-import styles from './style.module.css';
-import Input from '../../../components/Input/Input';
+import React from "react";
 
-const HeaderName = ({handleChange, firstNameValue, lastNameValue, currentRoleValue}) => {
+const HeaderName = ({setDatos}) => {
 
-    const valueChange = (fn,e) => {
-        fn(e.target.value);
-    };
 
     return (
         <>
-            <div>
-                <div className={styles.headerContainer}>
-                <form>
-                    <Input
-                        onChange={handleChange} 
-                        placeholder="First Name"
-                        value={firstNameValue}
-                        className={styles.nameInput} />
+            <form onSubmit={e => e.preventDefault}>
+            <h1>Personal Information</h1>
+                <input 
+                    type="text"
+                    placeholder="First Name"
+                    onChange={}
+                    name="firstName" 
+                
+                />
+                <input
+                    type="text"
+                    placeholder="Last Name"
+                    onChange={handleInputChange}
+                    name="lastName"
+                
+                />
+                <input
+                    type="text"
+                    placeholder="Role"
+                    onChange={handleInputChange}
+                    name="role"
+                
+                />
+                <input
+                    type="text"
+                    placeholder="Address"
+                    onChange={handleInputChange}
+                    name="address"
+                
+                />
+                <input
+                    type="email"
+                    placeholder="Email"
+                    onChange={handleInputChange}
+                    name="email"
                     
-                    <Input
-                        onChange={handleChange}
-                        placeholder="Last Name"
-                        value={lastNameValue} 
-                        className={styles.nameInput} />
+                />
+                <input
+                    type="text"
+                    placeholder="Phone"
+                    onChange={handleInputChange}
+                    name="phone"
+                
+                />
+            </form>
 
-                    <Input
-                        onChange={handleChange}
-                        placeholder="Current Role"
-                        value={currentRoleValue} 
-                        className={styles.nameInput} />
-                </form>
-                </div>
-    </div>
-  </>
-  );
+        </>
+    );
 };
 
 export default HeaderName;
