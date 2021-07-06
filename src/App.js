@@ -35,7 +35,7 @@ const App = () => {
     <>
       <Header />
       <Form
-        handleInputChange={setDatos} />
+        handleInputChange={handleInputChange} />
       <CV 
       datos={datos} />
     </>

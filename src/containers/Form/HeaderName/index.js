@@ -1,7 +1,6 @@
 import React from "react";
 
-const HeaderName = ({setDatos}) => {
-
+const HeaderName = ({handleInputChange}) => {
 
     return (
         <>
@@ -10,7 +9,7 @@ const HeaderName = ({setDatos}) => {
                 <input 
                     type="text"
                     placeholder="First Name"
-                    onChange={}
+                    onChange={handleInputChange}
                     name="firstName" 
                 
                 />

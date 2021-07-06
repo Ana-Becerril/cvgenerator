@@ -10,12 +10,9 @@ const Form = ({handleInputChange}) => {
   return (
   <>
   <div className={styles.formContainer}>
-   <HeaderName 
-   onChange={handleInputChange}/>
-   <Experience 
-   onChange={handleInputChange}/>
-   <Education
-   onChange={handleInputChange}/>
+   <HeaderName onChange={handleInputChange}/>
+   <Experience onChange={handleInputChange}/>
+   <Education onChange={handleInputChange}/>
    </div>
   </>
   );
