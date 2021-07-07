@@ -8,7 +8,7 @@ html, body{
 .header{
 width: 100%;
 height: 95px;
-background: rgb(214, 188, 250);
+background: #62ccbe;
 display: flex;
 align-items: center;
 justify-content: center;

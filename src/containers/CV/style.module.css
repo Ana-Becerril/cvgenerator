@@ -16,19 +16,22 @@
 border-radius: 8px;
 margin-top: 30px;
 }
-.mainContainer{
+
+.mainContainers{
     display: flex;
-    color: red;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: aqua;
 }
 
-.personal{
-    width: 100%;
-    height: 25%;
-    background-color: royalblue;
+
+.headerNameContainer{
+    width: 25%;
+    height: 100%;
     color: seashell;
+    font-size: 20px;
+    background: rgb(54,176,160);
+background: linear-gradient(180deg, rgba(54,176,160,1) 35%, rgba(253,224,255,0.8407738095238095) 100%);
 }
 
 
