@@ -9,30 +9,33 @@ const CV = ({ datos }) => {
     <>
       <div>
         <div className={styles.formContainer}>
-          <div className={styles.form}>
+          <div className={styles.page}>
             <div className={styles.mainContainers}>
-
               <div className={styles.headerNameContainer}>
-                <div>{datos.firstName}</div>
-                <div>{datos.lastName}</div>
+                <h1>{datos.firstName}</h1>
+                <h1>{datos.lastName}</h1>
                 <div>{datos.role}</div>
-                <p>Persona</p>
                 <div>{datos.address}</div>
                 <div>{datos.email}</div>
                 <div>{datos.phone}</div>
               </div>
-
-              <div>{datos.position}</div>
-              <div>{datos.company}</div>
-              <div>{datos.city}</div>
-              <div>{datos.from}</div>
-              <div>{datos.to}</div>
-              <div>{datos.university}</div>
-              <div>{datos.cityEducation}</div>
-              <div>{datos.degree}</div>
-              <div>{datos.subject}</div>
-              <div>{datos.fromEducation}</div>
-              <div>{datos.toEducation}</div>
+              <div className={styles.rightContainers}>
+              <div className={styles.experienceContainer}>
+                <div>{datos.position}</div>
+                <div>{datos.company}</div>
+                <div>{datos.city}</div>
+                <div>{datos.from}</div>
+                <div>{datos.to}</div>
+              </div>
+              <div className={styles.educationContainer}>
+                <div>{datos.university}</div>
+                <div>{datos.cityEducation}</div>
+                <div>{datos.degree}</div>
+                <div>{datos.subject}</div>
+                <div>{datos.fromEducation}</div>
+                <div>{datos.toEducation}</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

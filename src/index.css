@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Quicksand-Light';
+    src: url('./fonts/Quicksand-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Poppins-Ligth';
+    src: url('./fonts/Poppins-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+  }
