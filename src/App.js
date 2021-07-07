@@ -11,6 +11,7 @@ const App = () => {
     address: '',
     email: '',
     phone: '',
+    description:'',
     position: '',
     company: '',
     city: '',
@@ -83,6 +84,13 @@ const App = () => {
             placeholder="Phone"
             onChange={handleInputChange}
             name="phone"
+
+          />
+           <textarea 
+            type="text"
+            placeholder="Description"
+            onChange={handleInputChange}
+            name="description"
 
           />
         </form>

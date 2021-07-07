@@ -64,26 +64,32 @@ body {
 .headerNameContainer{
     padding: 1cm;
     height: 257mm;
-    width: 30%;
+    width: 35%;
     color: seashell;
-    font-size: 18px;
+    font-size: 14px;
     background: rgb(54,176,160);
-    background: linear-gradient(180deg, rgba(54,176,160,1) 49%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(180deg, rgba(54,176,160,1) 58%, rgba(0,0,0,0) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
+    text-align: center;
 }
 
 h1{
 margin: 0;
 font-size: 2.5rem;
+text-transform: uppercase;
+
 }
 
 .role{
-    text-decoration: underline 1px solid;
-    font-size: 28px;
-    display: flex;
-    align-self: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: 'Quicksand-Light';
+    padding: 20px 0;
+    border-bottom: 2px solid white;    
 }
 
 .rightContainers{
