@@ -15,29 +15,33 @@ const CV = ({ datos }) => {
                 <h1>{datos.firstName}</h1>
                 <h1>{datos.lastName}</h1>
                 <div className={styles.role}>{datos.role}</div>
-                <p></p>Address
+                <div className={styles.contact}>CONTACT</div>
                 <div>{datos.address}</div>
-                <p></p>Email
                 <div>{datos.email}</div>
-                <p></p>Phone
                 <div>{datos.phone}</div>
+                <div>{datos.linkedin}</div>
               </div>
               <div className={styles.rightContainers}>
-              <div className={styles.experienceContainer}>
-                <div>{datos.description}</div>
-                <div>{datos.position}</div>
-                <div>{datos.company}</div>
-                <div>{datos.city}</div>
-                <div>{datos.from}</div>
-                <div>{datos.to}</div>
-              </div>
-              <div className={styles.educationContainer}>
-                <div>{datos.university}</div>
-                <div>{datos.cityEducation}</div>
-                <div>{datos.degree}</div>
-                <div>{datos.subject}</div>
-                <div>{datos.fromEducation}</div>
-                <div>{datos.toEducation}</div>
+                  <div className={styles.skillsContainer}>
+                    <h3> SKILLS</h3>
+                    <li>{datos.skills}</li>
+                  </div>
+                  <div className={styles.experienceContainer}>
+                  <h3> EXPERIENCE</h3>
+                  <div>{datos.position}</div>
+                  <div>{datos.company}</div>
+                  <div>{datos.city}</div>
+                  <div>{datos.from}</div>
+                  <div>{datos.to}</div>
+                </div>
+                <div className={styles.educationContainer}>
+                <h3> EDUCATION</h3>
+                  <div>{datos.university}</div>
+                  <div>{datos.cityEducation}</div>
+                  <div>{datos.degree}</div>
+                  <div>{datos.subject}</div>
+                  <div>{datos.fromEducation}</div>
+                  <div>{datos.toEducation}</div>
                 </div>
               </div>
             </div>

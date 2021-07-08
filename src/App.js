@@ -11,7 +11,8 @@ const App = () => {
     address: '',
     email: '',
     phone: '',
-    description:'',
+    linkedin:'',
+    skills:'',
     position: '',
     company: '',
     city: '',
@@ -49,7 +50,6 @@ const App = () => {
             placeholder="First Name"
             onChange={handleInputChange}
             name="firstName"
-
           />
           <input
             type="text"
@@ -86,25 +86,40 @@ const App = () => {
             name="phone"
 
           />
-           <textarea 
-            type="text"
-            placeholder="Description"
-            onChange={handleInputChange}
-            name="description"
-
-          />
-        </form>
-
-      </div>
-      <div className={styles.experienceContainer}>
-        <form onSubmit={e => e.preventDefault}>
-
-          <h1>Experience</h1>
           <input
             type="text"
-            placeholder="Position"
+            placeholder="LinkedIn"
             onChange={handleInputChange}
-            name="position"
+              name="linkedin"
+            />
+          </form>
+        </div>
+        <div className={styles.skillsContainer}>
+          <form onSubmit={e => e.preventDefault}>
+          <h1>Skills</h1>
+          <input
+            type="text"
+            placeholder="Skills"
+            onChange={handleInputChange}
+            name="skills"
+          />
+          <button type="">
+            Add
+          </button>
+          <button>
+            Delete
+          </button>
+          </form>
+        </div>
+        <div className={styles.experienceContainer}>
+          <form onSubmit={e => e.preventDefault}>
+
+            <h1>Experience</h1>
+            <input
+              type="text"
+              placeholder="Position"
+              onChange={handleInputChange}
+              name="position"
           />
           <input
             type="text"
