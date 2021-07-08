@@ -104,8 +104,9 @@ text-transform: uppercase;
     padding-left: 25px;
 }
 
-.skillsContainer{
+.skillsContainer, .experienceContainer, .educationContainer{
     width: 450px;
+    font-weight: bolder;
 }
 
 h3{
@@ -116,5 +117,41 @@ h3{
     letter-spacing: 4px;
 }
 
+.position{
+    font-weight:bolder;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
 
+.companyData{
+    display: flex;
+    font-weight: bolder;
+    font-family: 'Quicksand-Light';
+}
 
+.company{
+    padding-right: 10px;
+}
+
+.activity, .achievement{
+    font-size: 0.9rem;
+    padding-right: 10px;
+    line-height: 1;
+    font-weight: lighter;
+}
+
+ul{
+    list-style-position: outside
+
+}
+
+.degree, .university{
+    text-transform: uppercase;
+}
+
+.university{
+    font-weight: lighter;
+    padding-right: 10px;
+
+}

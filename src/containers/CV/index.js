@@ -28,20 +28,27 @@ const CV = ({ datos }) => {
                   </div>
                   <div className={styles.experienceContainer}>
                   <h3> EXPERIENCE</h3>
-                  <div>{datos.position}</div>
-                  <div>{datos.company}</div>
-                  <div>{datos.city}</div>
-                  <div>{datos.from}</div>
+                  <div className={styles.position}>{datos.position}</div>
+                  <div className={styles.companyData}>
+                  <div className={styles.company}>{datos.company}</div>
+                  <div>{'|'+datos.from}</div>
+                  <div>-</div>
                   <div>{datos.to}</div>
+                  </div>
+                  <ul>
+                  <li className={styles.activity}>{datos.activity} </li>
+                  <li className={styles.achievement}>{datos.achievement} </li>
+                  </ul>
                 </div>
                 <div className={styles.educationContainer}>
                 <h3> EDUCATION</h3>
-                  <div>{datos.university}</div>
-                  <div>{datos.cityEducation}</div>
-                  <div>{datos.degree}</div>
-                  <div>{datos.subject}</div>
-                  <div>{datos.fromEducation}</div>
+                 <div className={styles.degree}>{datos.degree}</div>
+                 <div className={styles.companyData}>
+                  <div className={styles.university}>{datos.university}</div>
+                  <div>{'|'+datos.fromEducation}</div>
+                  <div>-</div>
                   <div>{datos.toEducation}</div>
+                  </div>
                 </div>
               </div>
             </div>

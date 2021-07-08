@@ -15,9 +15,10 @@ const App = () => {
     skills:'',
     position: '',
     company: '',
-    city: '',
     from: '',
     to: '',
+    activity: '',
+    achievement:'',
     university: '',
     cityEducation: '',
     degree: '',
@@ -129,12 +130,6 @@ const App = () => {
           />
           <input
             type="text"
-            placeholder="City"
-            onChange={handleInputChange}
-            name="city"
-          />
-          <input
-            type="text"
             placeholder="From"
             onChange={handleInputChange}
             name="from"
@@ -144,6 +139,18 @@ const App = () => {
             placeholder="To"
             onChange={handleInputChange}
             name="to"
+          />
+           <input
+            type="text"
+            placeholder="Main activity/activities"
+            onChange={handleInputChange}
+            name="activity"
+          />
+          <input
+            type="text"
+            placeholder="Main achievement/achievements"
+            onChange={handleInputChange}
+            name="achievement"
           />
           <button type="">
             Add
@@ -158,18 +165,6 @@ const App = () => {
         <form onSubmit={e => e.preventDefault}>
 
           <h1>Education</h1>
-
-          <input
-            type="text"
-            placeholder="University Name"
-            onChange={handleInputChange}
-            name="university" />
-          <input
-            type="text"
-            placeholder="City"
-            onChange={handleInputChange}
-            name="cityEducation"
-          />
           <input
             type="text"
             placeholder="Degree"
@@ -178,15 +173,14 @@ const App = () => {
           />
           <input
             type="text"
-            placeholder="Subject"
+            placeholder="University Name"
             onChange={handleInputChange}
-            name="subject"
-          />
+            name="university" />
           <input
             type="text"
             placeholder="From"
             onChange={handleInputChange}
-            name="fromEducatiom"
+            name="fromEducation"
           />
           <input
             type="text"
