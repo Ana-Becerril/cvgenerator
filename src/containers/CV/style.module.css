@@ -118,6 +118,12 @@ h3{
     letter-spacing: 4px;
 }
 
+.skillsList{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
 .position{
     font-weight:bolder;
     text-transform: uppercase;

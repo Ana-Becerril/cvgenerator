@@ -3,8 +3,6 @@ import styles from './style.module.css';
 
 const CV = ({ datos, chipsArr }) => {
 
-
-
   return (
     <>
       <div>
@@ -23,9 +21,10 @@ const CV = ({ datos, chipsArr }) => {
               </div>
               <div className={styles.rightContainers}>
                 <div className={styles.skillsContainer}>
-                  <h3> SKILLS</h3>
-                  {/* ver qué pedo con el map porque no hace un bullet para cada li :( */}
-                  <li>{chipsArr.skills}</li>
+                  <h3> SOFT SKILLS</h3>
+                  <ul className={styles.skillsList}>
+                    {(chipsArr.skills.length > 0)? chipsArr.skills.map((chips) => <li>{chips}</li>) : null} 
+                  </ul>
                 </div>
                 <div className={styles.experienceContainer}>
                   <h3> EXPERIENCE</h3>
