@@ -1,6 +1,5 @@
 @import url('./index.css');
 
-
 body, html{
     width: 100%;
     height: 100%;
@@ -19,7 +18,6 @@ body, html{
 .headerNameContainer, .experienceContainer, .educationContainer, .skillsContainer{
     width: 60%;
 }
-
 
 form{
     display: flex;
@@ -41,11 +39,6 @@ input, textarea{
   font-size: 18px;
   font-family: 'Poppins-Ligth';
 
-}
-
-textarea{
-height: 7px;
-font-size: 15px ;
 }
 
 button{

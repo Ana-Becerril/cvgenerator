@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.css';
 
-const CV = ({ datos }) => {
+const CV = ({ datos, chipsArr }) => {
 
 
 
@@ -22,32 +22,33 @@ const CV = ({ datos }) => {
                 <div>{datos.linkedin}</div>
               </div>
               <div className={styles.rightContainers}>
-                  <div className={styles.skillsContainer}>
-                    <h3> SKILLS</h3>
-                    <li>{datos.skills}</li>
-                  </div>
-                  <div className={styles.experienceContainer}>
+                <div className={styles.skillsContainer}>
+                  <h3> SKILLS</h3>
+                  {/* ver qué pedo con el map porque no hace un bullet para cada li :( */}
+                  <li>{chipsArr.skills}</li>
+                </div>
+                <div className={styles.experienceContainer}>
                   <h3> EXPERIENCE</h3>
                   <div className={styles.position}>{datos.position}</div>
                   <div className={styles.companyData}>
-                  <div className={styles.company}>{datos.company}</div>
-                  <div>{'|'+datos.from}</div>
-                  <div>-</div>
-                  <div>{datos.to}</div>
+                    <div className={styles.company}>{datos.company}</div>
+                    <div>{'|' + datos.from}</div>
+                    <div>-</div>
+                    <div>{datos.to}</div>
                   </div>
                   <ul>
-                  <li className={styles.activity}>{datos.activity} </li>
-                  <li className={styles.achievement}>{datos.achievement} </li>
+                    <li className={styles.activity}>{datos.activity} </li>
+                    <li className={styles.achievement}>{datos.achievement} </li>
                   </ul>
                 </div>
                 <div className={styles.educationContainer}>
-                <h3> EDUCATION</h3>
-                 <div className={styles.degree}>{datos.degree}</div>
-                 <div className={styles.companyData}>
-                  <div className={styles.university}>{datos.university}</div>
-                  <div>{'|'+datos.fromEducation}</div>
-                  <div>-</div>
-                  <div>{datos.toEducation}</div>
+                  <h3> EDUCATION</h3>
+                  <div className={styles.degree}>{datos.degree}</div>
+                  <div className={styles.companyData}>
+                    <div className={styles.university}>{datos.university}</div>
+                    <div className={styles.educationData}>{'|' + datos.fromEducation}</div>
+                    <div>-</div>
+                    <div className={styles.educationData}>{datos.toEducation}</div>
                   </div>
                 </div>
               </div>
