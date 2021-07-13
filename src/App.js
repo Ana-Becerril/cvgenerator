@@ -39,9 +39,14 @@ const App = () => {
   const handleChipChange = (chips) => {
     setChips(chips);
     setDatos ({...datos, 
-    skills: chipsArr});
-    console.log(datos)
-  }
+    skills: chips});
+    console.log(chipsArr)
+    chips.map((chips) =>
+  <li>{chips}</li>
+);
+    };
+
+  
 
   return (
     <>
