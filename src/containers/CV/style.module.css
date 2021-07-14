@@ -107,8 +107,15 @@ text-transform: uppercase;
 .skillsContainer, .experienceContainer, .educationContainer{
     width: 450px;
     font-weight: bolder;
-    padding-top: 25px;
+    margin-top: 10px;
 }
+
+.skillsContainer{
+    margin-top: 30px;
+
+}
+
+
 
 h3{
     color:rgb(54,176,160);
@@ -116,12 +123,6 @@ h3{
     border-bottom: rgb(54,176,160) solid 3px;
     margin-bottom: 8px;
     letter-spacing: 4px;
-}
-
-.skillsList{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
 }
 
 .position{
@@ -148,11 +149,16 @@ h3{
     font-weight: lighter;
 }
 
+.skillsList{
+    columns: 150px 2;
+}
+
 ul{
     list-style-position: outside;
     margin-top:4px;
     margin-left: 0px;
 }
+
 
 .degree, .university{
     text-transform: uppercase;
