@@ -3,6 +3,7 @@ import styles from './style.module.css';
 
 const CV = ({ datos, chipsArr }) => {
 
+
   return (
     <>
       <div>
@@ -26,6 +27,8 @@ const CV = ({ datos, chipsArr }) => {
                     {(chipsArr.skills.length > 0)? chipsArr.skills.map((chips) => <li>{chips}</li>) : null} 
                   </ul>
                 </div>
+
+
                 <div className={styles.experienceContainer}>
                   <h3> EXPERIENCE</h3>
                   <div className={styles.position}>{datos.position}</div>
@@ -40,6 +43,8 @@ const CV = ({ datos, chipsArr }) => {
                     <li className={styles.achievement}>{datos.achievement} </li>
                   </ul>
                 </div>
+
+
                 <div className={styles.educationContainer}>
                   <h3> EDUCATION</h3>
                   <div className={styles.degree}>{datos.degree}</div>
