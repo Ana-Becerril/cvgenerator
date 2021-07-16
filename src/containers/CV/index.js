@@ -21,10 +21,12 @@ const CV = ({ datos, chipsArr }) => {
                 <div>{datos.linkedin}</div>
               </div>
               <div className={styles.rightContainers}>
+
+                
                 <div className={styles.skillsContainer}>
                   <h3> SOFT SKILLS</h3>
                   <ul className={styles.skillsList}>
-                    {(chipsArr.skills.length > 0)? chipsArr.skills.map((chips) => <li>{chips}</li>) : null} 
+                    {(chipsArr.skills.length > 0) ? chipsArr.skills.map((chips) => <li>{chips}</li>) : null}
                   </ul>
                 </div>
 

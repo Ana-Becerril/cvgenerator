@@ -3,6 +3,7 @@ import CV from './containers/CV';
 import Header from './containers/Header'
 import styles from './App.module.css'
 import Chips from 'react-chips'
+import Personal from './components/Personal';
 import Experience from './components/Experience'
 import Education from './components/Education'
 
@@ -46,64 +47,11 @@ const App = () => {
     });
   };
 
-
   return (
     <>
       <Header />
       <div className={styles.formContainer}>
-        <div className={styles.headerNameContainer}>
-          <form onSubmit={e => e.preventDefault}>
-            <h1>Personal Information</h1>
-            <input
-              type="text"
-              placeholder="First Name"
-              onChange={handleInputChange}
-              name="firstName"
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              onChange={handleInputChange}
-              name="lastName"
-
-            />
-            <input
-              type="text"
-              placeholder="Role"
-              onChange={handleInputChange}
-              name="role"
-
-            />
-            <input
-              type="text"
-              placeholder="Address"
-              onChange={handleInputChange}
-              name="address"
-
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              onChange={handleInputChange}
-              name="email"
-
-            />
-            <input
-              type="text"
-              placeholder="Phone"
-              onChange={handleInputChange}
-              name="phone"
-
-            />
-            <input
-              type="text"
-              placeholder="LinkedIn"
-              onChange={handleInputChange}
-              name="linkedin"
-            />
-          </form>
-        </div>
-
+      <Personal handleInputChange={handleInputChange} datos={datos} />
         <div className={styles.skillsContainer}>
           <form onSubmit={e => e.preventDefault}>
             <h1>Soft Skills</h1>
