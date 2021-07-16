@@ -1,11 +1,7 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Experience = (handleTest, datos) => {
-
-    // useEffect(() => {
-    //     console.log(datos.position)
-    // }, [datos])
+const Experience = ({handleInputChange, datos}) => {
 
 return(
     <>
@@ -15,44 +11,50 @@ return(
             <input
               type="text"
               placeholder="Position"
-              onChange={handleTest('position')}
+              onChange={handleInputChange}
               name="position"
-              dato={datos.position}
+              datos={datos.position}
+            
             />
             <input
               type="text"
               placeholder="Company"
-              onChange={handleTest}
+              onChange={handleInputChange}
               name="company"
-              dato={datos.company}
+              datos={datos.company}
+
             />
             <input
               type="text"
               placeholder="From"
-              onChange={handleTest}
+              onChange={handleInputChange}
               name="from"
-              dato={datos.from}
+              datos={datos.from}
+
             />
             <input
               type="text"
               placeholder="To"
-              onChange={handleTest}
+              onChange={handleInputChange}
               name="to"
-              dato={datos.to}
+              datos={datos.to}
+
             />
             <input
               type="text"
               placeholder="Main activity/activities"
-              onChange={handleTest}
+              onChange={handleInputChange}
               name="activity"
-              dato={datos.activity}
+              datos={datos.activity}
+
             />
             <input
               type="text"
               placeholder="Main achievement/achievements"
-              onChange={handleTest}
+              onChange={handleInputChange}
               name="achievement"
-              dato={datos.achivement}
+              datos={datos.achievement}
+
             />
             <button>
               Add
