@@ -1,13 +1,12 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Education = ({handleInputChange, datos}) => {
+const Education = ({handleInputChange, datos, addForm, setState, form}) => {
 
   return (
     <>
        <div className={styles.educationContainer}>
           <form onSubmit={e => e.preventDefault}>
-            <h1>Education</h1>
             <input
               type="text"
               placeholder="Degree"
@@ -36,7 +35,7 @@ const Education = ({handleInputChange, datos}) => {
               name="toEducation"
               datos={datos.to}
             />
-            <button>
+            <button onClick={() => addForm(setState, form)} type="button">
               Add
             </button>
             <button>

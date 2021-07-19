@@ -1,13 +1,12 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Experience = ({handleInputChange, datos}) => {
+const Experience = ({handleInputChange, datos, addForm, setState, form}) => {
 
 return(
     <>
          <div className={styles.experienceContainer}>
           <form onSubmit={e => e.preventDefault}>
-            <h1>Experience</h1>
             <input
               type="text"
               placeholder="Position"
@@ -56,7 +55,7 @@ return(
               datos={datos.achievement}
 
             />
-            <button>
+            <button onClick={() => addForm(setState, form)} type="button">
               Add
             </button>
             <button>
