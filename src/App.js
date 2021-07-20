@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import CV from './containers/CV';
 import Header from './containers/Header'
 import styles from './App.module.css'
@@ -16,27 +16,28 @@ const App = () => {
     email: '',
     phone: '',
     linkedin: '',
-    skills: '',
+    skills: '',})
 
-    experiences:[{
-    position: '',
-    company: '',
-    from: '',
-    to: '',
-    activity: '',
-    achievement: ''}],
-    
-    educations:[{
-    university: '',
-    cityEducation: '',
-    degree: '',
-    subject: '',
-    fromEducation: '',
-    toEducation: ''}]
+  const [experiences, setExperiences] = useState({
+      position: '',
+      company: '',
+      from: '',
+      to: '',
+      activity: '',
+      achievement: ''})
+  
+  const [educations, setEducations] = useState ({
+      university: '',
+      cityEducation: '',
+      degree: '',
+      subject: '',
+      fromEducation: '',
+      toEducation: ''
   })
+
   const [chipsArr, setChips] = useState([]);
-  const [formExperience, setFormExperience]= useState(0);
-  const [formEducation, setFormEducation]= useState(0);
+  const [formEducation, setFormEducation]= useState([]);
+  const [formExperience, setFormExperience]= useState([]);
 
 
   const handleInputChange = (event) => {
@@ -54,20 +55,17 @@ const App = () => {
     });
   };
 
-  const addForm = (setState, form) => {
-    setState( form +1);
-    console.log(form)
+  const incrementForm = (setState, form, Component, datos) => {
+    setState(form + 1);
+    for(let i =0 ; i<form; i++){
+      setState([...form, <Component key={i} handleInputChange={handleInputChange} datos={datos}  form={form} />]);}
+      console.log(form)
   }
 
- const formBuilder = (num, NewForm, setState, form ) =>{
-   for (let i = 0; i < num; i++) {
-     return <NewForm handleInputChange={handleInputChange} datos={datos} addForm={addForm} setState={setState} form={form}/>
-   }
- }
- 
- useEffect(() => {
-   formBuilder(2, Experience,setFormExperience,formExperience)
- }, [])
+  const addForm = (setState, form, section) => {
+    setState ([...form, section])
+  }
+
 
   return (
     <>
@@ -88,10 +86,9 @@ const App = () => {
           </form>
         </div>
         <h1 className={styles.title}>Experience</h1>
-        <Experience handleInputChange={handleInputChange} datos={datos} addForm={addForm}
-        setState={setFormExperience} form={formExperience} />
+        <Experience handleInputChange={handleInputChange} experiences={experiences} incrementForm={incrementForm} setState={setFormExperience} form={formExperience}/>
         <h1 className={styles.title}>Education</h1>
-        <Education handleInputChange={handleInputChange} datos={datos.educations[0]} addForm={addForm} setState={setFormEducation} form={formEducation}/>
+        <Education handleInputChange={handleInputChange} educations={educations} incrementForm={incrementForm} setState={setFormEducation} form={formEducation}/>
       </div>
       <CV
         datos={datos}

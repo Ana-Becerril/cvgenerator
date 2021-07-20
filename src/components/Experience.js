@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Experience = ({handleInputChange, datos, addForm, setState, form}) => {
+const Experience = ({handleInputChange, experiences, incrementForm, setState, form, Component}) => {
 
 return(
     <>
@@ -12,7 +12,7 @@ return(
               placeholder="Position"
               onChange={handleInputChange}
               name="position"
-              datos={datos.position}
+              datos={experiences.position}
             
             />
             <input
@@ -20,7 +20,7 @@ return(
               placeholder="Company"
               onChange={handleInputChange}
               name="company"
-              datos={datos.company}
+              datos={experiences.company}
 
             />
             <input
@@ -28,7 +28,7 @@ return(
               placeholder="From"
               onChange={handleInputChange}
               name="from"
-              datos={datos.from}
+              datos={experiences.from}
 
             />
             <input
@@ -36,7 +36,7 @@ return(
               placeholder="To"
               onChange={handleInputChange}
               name="to"
-              datos={datos.to}
+              datos={experiences.to}
 
             />
             <input
@@ -44,7 +44,7 @@ return(
               placeholder="Main activity/activities"
               onChange={handleInputChange}
               name="activity"
-              datos={datos.activity}
+              datos={experiences.activity}
 
             />
             <input
@@ -52,10 +52,10 @@ return(
               placeholder="Main achievement/achievements"
               onChange={handleInputChange}
               name="achievement"
-              datos={datos.achievement}
+              datos={experiences.achievement}
 
             />
-            <button onClick={() => addForm(setState, form)} type="button">
+            <button onClick={() => incrementForm(setState, form, Component)} type="button">
               Add
             </button>
             <button>

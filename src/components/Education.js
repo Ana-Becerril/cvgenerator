@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Education = ({handleInputChange, datos, addForm, setState, form}) => {
+const Education = ({handleInputChange, educations, incrementForm, setState, form, Component}) => {
 
   return (
     <>
@@ -12,30 +12,30 @@ const Education = ({handleInputChange, datos, addForm, setState, form}) => {
               placeholder="Degree"
               onChange={handleInputChange}
               name="degree"
-              datos={datos.degree}
+              datos={educations.degree}
             />
             <input
               type="text"
               placeholder="University Name"
               onChange={handleInputChange}
               name="university"
-              datos={datos.university}
+              datos={educations.university}
             />
             <input
               type="text"
               placeholder="From"
               onChange={handleInputChange}
               name="fromEducation"
-              datos={datos.from}
+              datos={educations.from}
             />
             <input
               type="text"
               placeholder="To"
               onChange={handleInputChange}
               name="toEducation"
-              datos={datos.to}
+              datos={educations.to}
             />
-            <button onClick={() => addForm(setState, form)} type="button">
+            <button onClick={() => incrementForm (setState, form, Component)} type="button">
               Add
             </button>
             <button>
