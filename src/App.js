@@ -18,13 +18,13 @@ const App = () => {
     linkedin: '',
     skills: '',})
 
-  const [experiences, setExperiences] = useState({
+  const [experiences, setExperiences] = useState([{
       position: '',
       company: '',
       from: '',
       to: '',
       activity: '',
-      achievement: ''})
+      achievement: '',}])
   
   const [educations, setEducations] = useState ({
       university: '',
@@ -32,12 +32,9 @@ const App = () => {
       degree: '',
       subject: '',
       fromEducation: '',
-      toEducation: ''
-  })
+      toEducation: '',})
 
   const [chipsArr, setChips] = useState([]);
-  const [formEducation, setFormEducation]= useState([]);
-  const [formExperience, setFormExperience]= useState([]);
 
 
   const handleInputChange = (event) => {
@@ -55,16 +52,14 @@ const App = () => {
     });
   };
 
-  const incrementForm = (setState, form, Component, datos) => {
-    setState(form + 1);
-    for(let i =0 ; i<form; i++){
-      setState([...form, <Component key={i} handleInputChange={handleInputChange} datos={datos}  form={form} />]);}
-      console.log(form)
+  const incrementForm = (setState, object) => {
   }
 
-  const addForm = (setState, form, section) => {
-    setState ([...form, section])
-  }
+
+   const addForm = (setState, form, section) => {
+     setState([...form, section])
+     console.log(form)
+   }
 
 
   return (
@@ -86,13 +81,20 @@ const App = () => {
           </form>
         </div>
         <h1 className={styles.title}>Experience</h1>
-        <Experience handleInputChange={handleInputChange} experiences={experiences} incrementForm={incrementForm} setState={setFormExperience} form={formExperience}/>
+        <Experience handleInputChange={handleInputChange} experiences={experiences} setState={setExperiences} form={experiences}  addForm={() => addForm(setExperiences, experiences, {
+      position: '',
+      company: '',
+      from: '',
+      to: '',
+      activity: '',
+      achievement: '',}  )} />
         <h1 className={styles.title}>Education</h1>
-        <Education handleInputChange={handleInputChange} educations={educations} incrementForm={incrementForm} setState={setFormEducation} form={formEducation}/>
+        <Education handleInputChange={handleInputChange} educations={educations} incrementForm={incrementForm} setState={setEducations} form={educations} addForm={() => addForm()}/>
       </div>
       <CV
         datos={datos}
-        chipsArr={datos} />
+        chipsArr={datos}
+        experiences={experiences} />
     </>
   );
 };

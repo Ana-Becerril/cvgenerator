@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Education = ({handleInputChange, educations, incrementForm, setState, form, Component}) => {
+const Education = ({handleInputChange, educations, incrementForm, setState, form, Component, datos, addForm, section}) => {
 
   return (
     <>
@@ -35,7 +35,7 @@ const Education = ({handleInputChange, educations, incrementForm, setState, form
               name="toEducation"
               datos={educations.to}
             />
-            <button onClick={() => incrementForm (setState, form, Component)} type="button">
+            <button onClick={() => incrementForm (setState, form, Component, datos)} {...()=> addForm (setState, form, section)} type="button">
               Add
             </button>
             <button>
