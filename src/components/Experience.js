@@ -1,19 +1,20 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Experience = ({handleInputChange, experiences, incrementForm, setState, form, Component, datos, addForm, section}) => {
-
+const Experience = ({handleInputChange, experiences,  addForm, setState}) => {
+console.log(experiences)
 return(
     <>
          <div className={styles.experienceContainer}>
          <form onSubmit={e => e.preventDefault}>
-         {experiences.map((arrayChild)=> {
+         {experiences.map((arrayChild, i)=> {
  return (<><input
    type="text"
    placeholder="Position"
-   onChange={handleInputChange}
+   onChange={(e)=>handleInputChange(e,experiences[i])}
    name="position"
-   datos={arrayChild.position}
+   value={arrayChild.position}
+   key={i}
  
  />
  <input
@@ -21,7 +22,9 @@ return(
    placeholder="Company"
    onChange={handleInputChange}
    name="company"
-   datos={arrayChild.company}
+   value={arrayChild.company}
+   key={i}
+
 
  />
  <input
@@ -29,7 +32,9 @@ return(
    placeholder="From"
    onChange={handleInputChange}
    name="from"
-   datos={arrayChild.from}
+   value={arrayChild.from}
+      key={i}
+
 
  />
  <input
@@ -37,7 +42,9 @@ return(
    placeholder="To"
    onChange={handleInputChange}
    name="to"
-   datos={arrayChild.to}
+   value={arrayChild.to}
+      key={i}
+
 
  />
  <input
@@ -45,7 +52,9 @@ return(
    placeholder="Main activity/activities"
    onChange={handleInputChange}
    name="activity"
-   datos={arrayChild.activity}
+   value={arrayChild.activity}
+   key={i}
+
 
  />
  <input
@@ -53,7 +62,9 @@ return(
    placeholder="Main achievement/achievements"
    onChange={handleInputChange}
    name="achievement"
-   datos={arrayChild.achievement}
+   value={arrayChild.achievement}
+      key={i}
+
 
  />
  <button onClick={addForm} type="button">

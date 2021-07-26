@@ -37,11 +37,24 @@ const App = () => {
   const [chipsArr, setChips] = useState([]);
 
 
-  const handleInputChange = (event) => {
-    setDatos({
-      ...datos,
+  const handleInputChange = (event, setState, items) => {
+    setState({
+      ...items,
       [event.target.name]: event.target.value
     })
+    console.log(event.target)
+    console.log(event.target.value)
+    console.log(items)
+  }
+
+  const handleInputChangeExperiences = (event, experiences) => {
+    setExperiences({
+      ...experiences,
+      [event.target.name]: event.target.value
+    })
+    console.log(event.target)
+    console.log(event.target.value)
+    console.log(experiences)
   }
 
   const handleChipChange = (chips) => {
@@ -66,7 +79,7 @@ const App = () => {
     <>
       <Header />
       <div className={styles.formContainer}>
-      <Personal handleInputChange={handleInputChange} datos={datos} />
+      <Personal handleInputChange={(e) => handleInputChange(e,setDatos, datos)} datos={datos} />
         <div className={styles.skillsContainer}>
           <form onSubmit={e => e.preventDefault}>
             <h1>Soft Skills</h1>
@@ -81,15 +94,20 @@ const App = () => {
           </form>
         </div>
         <h1 className={styles.title}>Experience</h1>
-        <Experience handleInputChange={handleInputChange} experiences={experiences} setState={setExperiences} form={experiences}  addForm={() => addForm(setExperiences, experiences, {
-      position: '',
-      company: '',
-      from: '',
-      to: '',
-      activity: '',
-      achievement: '',}  )} />
+        <Experience
+          handleInputChange={handleInputChangeExperiences}
+          experiences={experiences}
+          setState={setExperiences}
+          addForm={() => addForm(setExperiences, experiences, {
+            position: '',
+            company: '',
+            from: '',
+            to: '',
+            activity: '',
+            achievement: '',
+          })} />
         <h1 className={styles.title}>Education</h1>
-        <Education handleInputChange={handleInputChange} educations={educations} incrementForm={incrementForm} setState={setEducations} form={educations} addForm={() => addForm()}/>
+        <Education handleInputChange={handleInputChange} educations={educations} incrementForm={incrementForm} setState={setEducations} form={educations} addForm={() => addForm()} />
       </div>
       <CV
         datos={datos}
