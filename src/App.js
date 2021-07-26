@@ -16,23 +16,27 @@ const App = () => {
     email: '',
     phone: '',
     linkedin: '',
-    skills: '',})
+    skills: '',
+  })
 
-  const [experiences, setExperiences] = useState([{
-      position: '',
-      company: '',
-      from: '',
-      to: '',
-      activity: '',
-      achievement: '',}])
-  
-  const [educations, setEducations] = useState ({
-      university: '',
-      cityEducation: '',
-      degree: '',
-      subject: '',
-      fromEducation: '',
-      toEducation: '',})
+  const [experiences, setExperiences] = useState(
+    [{
+    position: '',
+    company: '',
+    from: '',
+    to: '',
+    activity: '',
+    achievement: '',
+  }])
+
+  const [educations, setEducations] = useState({
+    university: '',
+    cityEducation: '',
+    degree: '',
+    subject: '',
+    fromEducation: '',
+    toEducation: '',
+  })
 
   const [chipsArr, setChips] = useState([]);
 
@@ -47,11 +51,11 @@ const App = () => {
     console.log(items)
   }
 
-  const handleInputChangeExperiences = (event, experiences) => {
-    setExperiences({
-      ...experiences,
-      [event.target.name]: event.target.value
-    })
+  const handleInputChangeExperiences = (event, experiences, experienceChild) => {
+    setExperiences(
+      [...experiences,{ ...experienceChild,
+        [event.target.name]: event.target.value}]
+    )
     console.log(event.target)
     console.log(event.target.value)
     console.log(experiences)
@@ -65,21 +69,18 @@ const App = () => {
     });
   };
 
-  const incrementForm = (setState, object) => {
+
+  const addForm = (setState, form, section) => {
+    setState([...form, section])
+    console.log(form)
   }
-
-
-   const addForm = (setState, form, section) => {
-     setState([...form, section])
-     console.log(form)
-   }
 
 
   return (
     <>
       <Header />
       <div className={styles.formContainer}>
-      <Personal handleInputChange={(e) => handleInputChange(e,setDatos, datos)} datos={datos} />
+        <Personal handleInputChange={(e) => handleInputChange(e, setDatos, datos)} datos={datos} />
         <div className={styles.skillsContainer}>
           <form onSubmit={e => e.preventDefault}>
             <h1>Soft Skills</h1>
@@ -107,7 +108,12 @@ const App = () => {
             achievement: '',
           })} />
         <h1 className={styles.title}>Education</h1>
-        <Education handleInputChange={handleInputChange} educations={educations} incrementForm={incrementForm} setState={setEducations} form={educations} addForm={() => addForm()} />
+        <Education
+          handleInputChange={handleInputChange}
+          educations={educations}
+          setState={setEducations}
+          form={educations}
+          addForm={() => addForm()} />
       </div>
       <CV
         datos={datos}

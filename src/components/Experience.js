@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Experience = ({handleInputChange, experiences,  addForm, setState}) => {
+const Experience = ({handleInputChange, experiences,  addForm}) => {
 console.log(experiences)
 return(
     <>
@@ -11,7 +11,7 @@ return(
  return (<><input
    type="text"
    placeholder="Position"
-   onChange={(e)=>handleInputChange(e,experiences[i])}
+   onChange={(e)=>handleInputChange(e,experiences, experiences[i])}
    name="position"
    value={arrayChild.position}
    key={i}
