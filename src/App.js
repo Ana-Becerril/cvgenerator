@@ -43,7 +43,7 @@ const App = () => {
 
   const handleInputChange = (event, setState, items) => {
     setState({
-      ...items,
+       ...items,
       [event.target.name]: event.target.value
     })
     console.log(event.target)
@@ -52,10 +52,10 @@ const App = () => {
   }
 
   const handleInputChangeExperiences = (event, experiences, experienceChild) => {
-    setExperiences(
-      [...experiences,{ ...experienceChild,
-        [event.target.name]: event.target.value}]
-    )
+    
+    let newArr = [...experiences];
+    newArr[experienceChild][event.target.name] = event.target.value
+    setExperiences(newArr);
     console.log(event.target)
     console.log(event.target.value)
     console.log(experiences)
@@ -69,12 +69,10 @@ const App = () => {
     });
   };
 
-
   const addForm = (setState, form, section) => {
     setState([...form, section])
     console.log(form)
   }
-
 
   return (
     <>

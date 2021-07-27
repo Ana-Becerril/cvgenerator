@@ -11,7 +11,7 @@ return(
  return (<><input
    type="text"
    placeholder="Position"
-   onChange={(e)=>handleInputChange(e,experiences, experiences[i])}
+   onChange={(e)=>handleInputChange(e,experiences,i)}
    name="position"
    value={arrayChild.position}
    key={i}
