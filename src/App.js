@@ -52,18 +52,12 @@ const App = () => {
     let newArr = [...experiences];
     newArr[experienceChild][event.target.name] = event.target.value
     setExperiences(newArr);
-    console.log(event.target)
-    console.log(event.target.value)
-    console.log(experiences)
   }
 
   const handleInputChangeEducations = (event, educations, educationChild) => {
     let newArr = [...educations];
     newArr[educationChild][event.target.name] = event.target.value
     setEducations(newArr);
-    console.log(event.target)
-    console.log(event.target.value)
-    console.log(experiences)
   }
 
   const handleChipChange = (chips) => {
@@ -77,6 +71,14 @@ const App = () => {
   const addForm = (setState, form, section) => {
     setState([...form, section])
     console.log(form)
+    // console.log(section)
+  }
+
+  const deleteForm = (setState, form, section) => {
+    console.log(form[section])
+    const formClone=[...form];
+    formClone.splice(section, 1);
+    setState(formClone)
   }
 
   return (
@@ -103,6 +105,14 @@ const App = () => {
           handleInputChange={handleInputChangeExperiences}
           experiences={experiences}
           setState={setExperiences}
+          deleteForm={() => deleteForm(setExperiences,experiences, {
+            position: '',
+            company: '',
+            from: '',
+            to: '',
+            activity: '',
+            achievement: '',
+          })}
           addForm={() => addForm(setExperiences, experiences, {
             position: '',
             company: '',
@@ -116,6 +126,7 @@ const App = () => {
           handleInputChange={handleInputChangeEducations}
           educations={educations}
           setState={setEducations}
+          deleteForm={deleteForm}
           addForm={() => addForm(setEducations, educations, {
             university: '',
             cityEducation: '',

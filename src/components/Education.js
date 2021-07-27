@@ -47,7 +47,7 @@ const Education = ({ handleInputChange, educations, addForm }) => {
               <button onClick={addForm} type="button">
                 Add
               </button>
-              <button>
+              <button type="button"> 
                 Delete
               </button>
             </>)
