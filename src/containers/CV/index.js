@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.css';
 
-const CV = ({ datos, chipsArr, experiences }) => {
+const CV = ({ datos, chipsArr, experiences, educations }) => {
 
 
   return (
@@ -33,18 +33,21 @@ const CV = ({ datos, chipsArr, experiences }) => {
 
                 <div className={styles.experienceContainer}>
                   <h3> EXPERIENCE</h3>
-                  
-                      <div className={styles.position}>{datos.position}</div>
+                  {experiences.map((sectionExperiences) => {
+                    return (<>
+                      <div className={styles.position}>{sectionExperiences.position}</div>
                       <div className={styles.companyData}>
-                        <div className={styles.company}>{datos.company}</div>
-                        <div>{'|' + datos.from}</div>
+                        <div className={styles.company}>{sectionExperiences.company}</div>
+                        <div>{'|' + sectionExperiences.from}</div>
                         <div>-</div>
-                        <div>{datos.to}</div>
+                        <div>{sectionExperiences.to}</div>
                       </div>
                       <ul>
-                        <li className={styles.activity}>{datos.activity} </li>
-                        <li className={styles.achievement}>{datos.achievement} </li>
+                        <li className={styles.activity}>{sectionExperiences.activity} </li>
+                        <li className={styles.achievement}>{sectionExperiences.achievement} </li>
                       </ul>
+                    </>)
+                  })}
                     
                 </div>
 

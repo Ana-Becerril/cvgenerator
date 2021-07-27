@@ -1,52 +1,62 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Education = ({handleInputChange, educations, incrementForm, setState, form, Component, datos, addForm, section}) => {
-
+const Education = ({ handleInputChange, educations, addForm }) => {
+  console.log(educations)
   return (
     <>
-       <div className={styles.educationContainer}>
-          <form onSubmit={e => e.preventDefault}>
-            <input
+      <div className={styles.educationContainer}>
+        <form onSubmit={e => e.preventDefault}>
+          {educations.map((arrayChild, i) => {
+            return (<><input
+
               type="text"
               placeholder="Degree"
-              onChange={handleInputChange}
+              onChange={(e) => handleInputChange(e, educations, i)}
               name="degree"
-              datos={educations.degree}
+              value={arrayChild.degree}
+              key={"degree" + i}
             />
-            <input
-              type="text"
-              placeholder="University Name"
-              onChange={handleInputChange}
-              name="university"
-              datos={educations.university}
-            />
-            <input
-              type="text"
-              placeholder="From"
-              onChange={handleInputChange}
-              name="fromEducation"
-              datos={educations.from}
-            />
-            <input
-              type="text"
-              placeholder="To"
-              onChange={handleInputChange}
-              name="toEducation"
-              datos={educations.to}
-            />
-            <button onClick={() => incrementForm (setState, form, Component, datos)} {...()=> addForm (setState, form, section)} type="button">
-              Add
-            </button>
-            <button>
-              Delete
-            </button>
-            </form>
-            
-        </div>
+              <input
+
+                type="text"
+                placeholder="University Name"
+                onChange={(e) => handleInputChange(e, educations, i)}
+                name="university"
+                value={arrayChild.university}
+                key={"university" + i}
+              />
+              <input
+
+                type="text"
+                placeholder="From"
+                onChange={(e) => handleInputChange(e, educations, i)}
+                name="fromEducation"
+                value={arrayChild.fromEducation}
+                key={"fromEducation" + i}
+              />
+              <input
+
+                type="text"
+                placeholder="To"
+                onChange={(e) => handleInputChange(e, educations, i)}
+                name="toEducation"
+                value={arrayChild.toEducation}
+                key={"toEducation" + i}
+              />
+              <button onClick={addForm} type="button">
+                Add
+              </button>
+              <button>
+                Delete
+              </button>
+            </>)
+          })}
+        </form>
+
+      </div>
     </>
   )
-
 };
 
 export default Education;

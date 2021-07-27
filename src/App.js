@@ -29,14 +29,14 @@ const App = () => {
     achievement: '',
   }])
 
-  const [educations, setEducations] = useState({
+  const [educations, setEducations] = useState([{
     university: '',
     cityEducation: '',
     degree: '',
     subject: '',
     fromEducation: '',
     toEducation: '',
-  })
+  }])
 
   const [chipsArr, setChips] = useState([]);
 
@@ -52,6 +52,15 @@ const App = () => {
     let newArr = [...experiences];
     newArr[experienceChild][event.target.name] = event.target.value
     setExperiences(newArr);
+    console.log(event.target)
+    console.log(event.target.value)
+    console.log(experiences)
+  }
+
+  const handleInputChangeEducations = (event, educations, educationChild) => {
+    let newArr = [...educations];
+    newArr[educationChild][event.target.name] = event.target.value
+    setEducations(newArr);
     console.log(event.target)
     console.log(event.target.value)
     console.log(experiences)
@@ -74,7 +83,8 @@ const App = () => {
     <>
       <Header />
       <div className={styles.formContainer}>
-        <Personal handleInputChange={(e) => handleInputChange(e, setDatos, datos)} datos={datos} />
+        <Personal handleInputChange={(e) => handleInputChange(e, setDatos, datos)} 
+        datos={datos} />
         <div className={styles.skillsContainer}>
           <form onSubmit={e => e.preventDefault}>
             <h1>Soft Skills</h1>
@@ -103,16 +113,23 @@ const App = () => {
           })} />
         <h1 className={styles.title}>Education</h1>
         <Education
-          handleInputChange={handleInputChange}
+          handleInputChange={handleInputChangeEducations}
           educations={educations}
           setState={setEducations}
-          form={educations}
-          addForm={() => addForm()} />
+          addForm={() => addForm(setEducations, educations, {
+            university: '',
+            cityEducation: '',
+            degree: '',
+            subject: '',
+            fromEducation: '',
+            toEducation: '',
+          })} />
       </div>
       <CV
         datos={datos}
         chipsArr={datos}
-        experiences={experiences} />
+        experiences={experiences}
+        educations={educations} />
     </>
   );
 };
