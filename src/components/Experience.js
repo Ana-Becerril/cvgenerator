@@ -14,56 +14,56 @@ return(
    onChange={(e)=>handleInputChange(e,experiences,i)}
    name="position"
    value={arrayChild.position}
-   key={i}
+   key={"position" + i}
  
  />
  <input
    type="text"
    placeholder="Company"
-   onChange={handleInputChange}
+   onChange={(e)=>handleInputChange(e,experiences,i)}
    name="company"
    value={arrayChild.company}
-   key={i}
+   key={"company" + i}
 
 
  />
  <input
    type="text"
    placeholder="From"
-   onChange={handleInputChange}
+   onChange={(e)=>handleInputChange(e,experiences,i)}
    name="from"
    value={arrayChild.from}
-      key={i}
+   key={"from" + i}
 
 
  />
  <input
    type="text"
    placeholder="To"
-   onChange={handleInputChange}
+   onChange={(e)=>handleInputChange(e,experiences,i)}
    name="to"
    value={arrayChild.to}
-      key={i}
+   key={"to" + i}
 
 
  />
  <input
    type="text"
    placeholder="Main activity/activities"
-   onChange={handleInputChange}
+   onChange={(e)=>handleInputChange(e,experiences,i)}
    name="activity"
    value={arrayChild.activity}
-   key={i}
+   key={"activity" + i}
 
 
  />
  <input
    type="text"
    placeholder="Main achievement/achievements"
-   onChange={handleInputChange}
+   onChange={(e)=>handleInputChange(e,experiences,i)}
    name="achievement"
    value={arrayChild.achievement}
-      key={i}
+      key={"achievement" + i}
 
 
  />

@@ -46,13 +46,9 @@ const App = () => {
        ...items,
       [event.target.name]: event.target.value
     })
-    console.log(event.target)
-    console.log(event.target.value)
-    console.log(items)
   }
 
   const handleInputChangeExperiences = (event, experiences, experienceChild) => {
-    
     let newArr = [...experiences];
     newArr[experienceChild][event.target.name] = event.target.value
     setExperiences(newArr);
