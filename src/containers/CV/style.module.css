@@ -116,7 +116,6 @@ text-transform: uppercase;
 }
 
 
-
 h3{
     color:rgb(54,176,160);
     margin-bottom: 0;
@@ -160,17 +159,24 @@ ul{
 }
 
 
-.degree, .university{
+.degree, .university, .city{
     text-transform: uppercase;
 }
 
 .university{
     font-weight: lighter;
     padding-right: 10px;
-    font-size: 13px;
-}
-
-.educationData{
     font-size: 14px;
-
 }
+
+.educationData, .city{
+    font-size: 14px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+}
+
+.dash{
+    padding-bottom: 0;
+    padding: 0;
+}
+

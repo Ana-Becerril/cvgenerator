@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Experience = ({ handleInputChange, experiences, addForm, deleteForm }) => {
+const Experience = ({ handleInputChange, experiences, setState , deleteForm, addForm }) => {
   console.log(experiences)
+
   return (
     <>
       <div className={styles.experienceContainer}>
@@ -72,7 +73,18 @@ const Experience = ({ handleInputChange, experiences, addForm, deleteForm }) => 
 
 
               />
-              <button onClick={addForm} type="button">
+              <button 
+            onClick={ ()=>addForm(setState, experiences,{
+              id:'',
+              position: '',
+              company: '',
+              from: '',
+              to: '',
+              activity: '',
+              achievement: '',
+            },
+            i )} 
+            type="button">
                 Add
               </button>
               <button onClick={deleteForm} type="button">

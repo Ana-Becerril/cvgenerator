@@ -51,12 +51,13 @@ const CV = ({ datos, chipsArr, experiences, educations }) => {
                 </div>
 
                 <div className={styles.educationContainer}>
-                  <h3> EDUCATION</h3>
+                  <h3> EDUCATION & CERTIFICATES</h3>
                   {educations.map((sectionEducations) => {
                     return (<>
                       <div className={styles.degree}>{sectionEducations.degree}</div>
+                      <div className={styles.university}>{sectionEducations.university}</div>
                       <div className={styles.companyData}>
-                        <div className={styles.university}>{sectionEducations.university}</div>
+                        <div className={styles.city}>{sectionEducations.city}</div>
                         <div className={styles.educationData}>{'|' + sectionEducations.fromEducation}</div>
                         <div>-</div>
                         <div className={styles.educationData}>{sectionEducations.toEducation}</div>

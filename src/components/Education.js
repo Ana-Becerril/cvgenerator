@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Education = ({ handleInputChange, educations, addForm }) => {
+const Education = ({ handleInputChange, educations, addForm, deleteForm }) => {
   console.log(educations)
   return (
     <>
@@ -11,7 +11,7 @@ const Education = ({ handleInputChange, educations, addForm }) => {
             return (<><input
 
               type="text"
-              placeholder="Degree"
+              placeholder="Degree / Certificates"
               onChange={(e) => handleInputChange(e, educations, i)}
               name="degree"
               value={arrayChild.degree}
@@ -20,7 +20,7 @@ const Education = ({ handleInputChange, educations, addForm }) => {
               <input
 
                 type="text"
-                placeholder="University Name"
+                placeholder="University / Institution"
                 onChange={(e) => handleInputChange(e, educations, i)}
                 name="university"
                 value={arrayChild.university}
@@ -44,10 +44,19 @@ const Education = ({ handleInputChange, educations, addForm }) => {
                 value={arrayChild.toEducation}
                 key={"toEducation" + i}
               />
-              <button onClick={addForm} type="button">
+              <input
+
+                type="text"
+                placeholder="City"
+                onChange={(e) => handleInputChange(e, educations, i)}
+                name="city"
+                value={arrayChild.city}
+                key={"city" + i}
+              />
+              <button onClick={()=>addForm()} type="button">
                 Add
               </button>
-              <button type="button"> 
+              <button onClick={deleteForm} type="button">
                 Delete
               </button>
             </>)

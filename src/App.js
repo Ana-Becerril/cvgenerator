@@ -21,6 +21,7 @@ const App = () => {
 
   const [experiences, setExperiences] = useState(
     [{
+    id:'',
     position: '',
     company: '',
     from: '',
@@ -29,13 +30,14 @@ const App = () => {
     achievement: '',
   }])
 
-  const [educations, setEducations] = useState([{
+  const [educations, setEducations] = useState(
+    [{
     university: '',
-    cityEducation: '',
     degree: '',
     subject: '',
     fromEducation: '',
     toEducation: '',
+    city:'',
   }])
 
   const [chipsArr, setChips] = useState([]);
@@ -68,18 +70,46 @@ const App = () => {
     });
   };
 
-  const addForm = (setState, form, section) => {
-    setState([...form, section])
-    console.log(form)
-    // console.log(section)
-  }
+   const addForm = (setState, form, section, id) => {
+     section.id = id;
+     setState([...form, section])
+     console.log(id)
+   }
 
-  const deleteForm = (setState, form, section) => {
-    console.log(form[section])
-    const formClone=[...form];
-    formClone.splice(section, 1);
-    setState(formClone)
-  }
+  
+
+//   const deleteForm = (setState, form, section) => {
+//     // console.log(form[section])
+//     const formClone=[...form];
+//     formClone.splice(section, 1);
+//     setState(formClone)
+//     console.log(section)
+// }
+
+    //  const deleteForm = (setState, section) => { // remove by index
+    // setState(prevState => {
+    //     const sections = [...prevState]; // create new array based on current tasks
+    //     sections.splice(section, 1); // remove task by index
+    //     return sections; // return altered array
+    // })}
+
+  const deleteForm = (setState, section, i) => {
+    const arr = section.filter((section) => section.id !== i);
+    setState(arr);
+  };
+
+// const remove = (i) => {
+//   const arr = data.filter((item) => item.name !== i);
+//   setData(arr);
+// };
+
+// function removeTask(itemI) {
+//   setTasks(prevState => prevState.filter(({ id }) => id !== itemId));
+// }
+
+
+
+
 
   return (
     <>
@@ -105,7 +135,7 @@ const App = () => {
           handleInputChange={handleInputChangeExperiences}
           experiences={experiences}
           setState={setExperiences}
-          deleteForm={() => deleteForm(setExperiences,experiences, {
+          deleteForm={() => deleteForm(setExperiences, {
             position: '',
             company: '',
             from: '',
@@ -113,27 +143,28 @@ const App = () => {
             activity: '',
             achievement: '',
           })}
-          addForm={() => addForm(setExperiences, experiences, {
-            position: '',
-            company: '',
-            from: '',
-            to: '',
-            activity: '',
-            achievement: '',
-          })} />
-        <h1 className={styles.title}>Education</h1>
+           addForm={addForm}
+          />
+        <h1 className={styles.title}>Education/Certificates</h1>
         <Education
           handleInputChange={handleInputChangeEducations}
           educations={educations}
           setState={setEducations}
-          deleteForm={deleteForm}
-          addForm={() => addForm(setEducations, educations, {
+          deleteForm={() => deleteForm(setEducations,educations, {
             university: '',
-            cityEducation: '',
             degree: '',
             subject: '',
             fromEducation: '',
             toEducation: '',
+            city:'',
+          })}
+          addForm={() => addForm(setEducations, educations, {
+            university: '',
+            degree: '',
+            subject: '',
+            fromEducation: '',
+            toEducation: '',
+            city:'',
           })} />
       </div>
       <CV
