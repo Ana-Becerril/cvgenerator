@@ -72,16 +72,20 @@ const App = () => {
   };
 
    const addForm = (setState, form, section, id) => {
-     section.id = id+1;
+     section.id = id;
      setState([...form, section])
      console.log(id)
    }
 
 
   const deleteForm = (setState, form, i) => {
-    const arr = form.filter(section => section.id !== (i));
-    console.log(form)
+    const arr = form.filter(element => element.id !== i-1);
+    for (let index = 1; index < arr.length; index++) {
+      const section = arr[index];
+      section.id = index;
+    }
     setState(arr);
+    console.log(form)
   }
 
   return (
@@ -124,15 +128,8 @@ const App = () => {
           //   toEducation: '',
           //   city:'',
           // })}
-          addForm={() => addForm(setEducations, educations, {
-            id:'',
-            university: '',
-            degree: '',
-            subject: '',
-            fromEducation: '',
-            toEducation: '',
-            city:'',
-          })} />
+          // 
+           />
       </div>
       <CV
         datos={datos}

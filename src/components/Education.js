@@ -53,12 +53,12 @@ const Education = ({ handleInputChange, educations, addForm, deleteForm }) => {
                 value={arrayChild.city}
                 key={"city" + i}
               />
-              <button onClick={()=>addForm()} type="button">
+              {/* <button onClick={()=>addForm()} type="button">
                 Add
               </button>
               <button onClick={deleteForm} type="button">
                 Delete
-              </button>
+              </button> */}
             </>)
           })}
         </form>
