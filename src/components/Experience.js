@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../App.module.css'
 
 const Experience = ({ handleInputChange, experiences, setState , deleteForm, addForm }) => {
-  console.log(experiences)
 
   return (
     <>
@@ -87,7 +86,9 @@ const Experience = ({ handleInputChange, experiences, setState , deleteForm, add
             type="button">
                 Add
               </button>
-              <button onClick={deleteForm} type="button">
+              <button 
+            onClick={()=> deleteForm (setState, experiences, i)}
+              type="button">
                 Delete
               </button>
             </>)
