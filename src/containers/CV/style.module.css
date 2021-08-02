@@ -76,6 +76,13 @@ body {
     text-align: center;
 }
 
+.image{
+    width: 80%;
+    height: 20%;
+    margin-bottom: 25px;
+    border: 1px white solid;
+}
+
 h1{
 margin: 0;
 font-size: 2.5rem;

@@ -11,6 +11,7 @@ const CV = ({ datos, chipsArr, experiences, educations }) => {
           <div className={styles.page}>
             <div className={styles.mainContainers}>
               <div className={styles.headerNameContainer}>
+                <div className={styles.image}>{datos.picture}</div>
                 <h1>{datos.firstName}</h1>
                 <h1>{datos.lastName}</h1>
                 <div className={styles.role}>{datos.role}</div>

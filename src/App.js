@@ -7,8 +7,10 @@ import Personal from './components/Personal';
 import Experience from './components/Experience'
 import Education from './components/Education'
 
+
 const App = () => {
   const [datos, setDatos] = useState({
+    picture:'',
     firstname: '',
     lastname: '',
     role: '',

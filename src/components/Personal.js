@@ -1,14 +1,29 @@
 import React  from 'react';
 import styles from '../App.module.css'
-
+import { useForm } from "react-hook-form";
 
 const Personal = ({handleInputChange, datos}) => {
 
+    const { register, handleSubmit } = useForm();
+  
+    const onSubmit = (data) => {
+      console.log(data);
+    };
+
+
     return (
         <>
-         <div className={styles.headerNameContainer}>
-          <form onSubmit={e => e.preventDefault}>
+        <div className={styles.headerNameContainer}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <h1>Personal Information</h1>
+            <input
+              type="file"
+              name="picture"
+              {...register("picture", {
+                required: "Required",
+              })}
+              />
+            <button>Submit</button>
             <input
               type="text"
               placeholder="First Name"
