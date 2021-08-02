@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from '../App.module.css'
 
-const Education = ({ handleInputChange, educations, addForm, deleteForm }) => {
+const Education = ({ handleInputChange, educations, setState , deleteForm, addForm }) => {
   console.log(educations)
+
   return (
     <>
       <div className={styles.educationContainer}>
@@ -15,7 +16,7 @@ const Education = ({ handleInputChange, educations, addForm, deleteForm }) => {
               onChange={(e) => handleInputChange(e, educations, i)}
               name="degree"
               value={arrayChild.degree}
-              key={"degree" + i}
+              key={"degree" + arrayChild.id}
             />
               <input
 
@@ -24,7 +25,7 @@ const Education = ({ handleInputChange, educations, addForm, deleteForm }) => {
                 onChange={(e) => handleInputChange(e, educations, i)}
                 name="university"
                 value={arrayChild.university}
-                key={"university" + i}
+                key={"university" + arrayChild.id}
               />
               <input
 
@@ -33,7 +34,7 @@ const Education = ({ handleInputChange, educations, addForm, deleteForm }) => {
                 onChange={(e) => handleInputChange(e, educations, i)}
                 name="fromEducation"
                 value={arrayChild.fromEducation}
-                key={"fromEducation" + i}
+                key={"fromEducation" + arrayChild.id}
               />
               <input
 
@@ -42,7 +43,7 @@ const Education = ({ handleInputChange, educations, addForm, deleteForm }) => {
                 onChange={(e) => handleInputChange(e, educations, i)}
                 name="toEducation"
                 value={arrayChild.toEducation}
-                key={"toEducation" + i}
+                key={"toEducation" + arrayChild.id}
               />
               <input
 
@@ -51,14 +52,28 @@ const Education = ({ handleInputChange, educations, addForm, deleteForm }) => {
                 onChange={(e) => handleInputChange(e, educations, i)}
                 name="city"
                 value={arrayChild.city}
-                key={"city" + i}
+                key={"city" + arrayChild.id}
               />
-              {/* <button onClick={()=>addForm()} type="button">
+              <button
+                onClick={
+                  () => addForm(setState, educations, {
+                    id: 0,
+                    university: '',
+                    degree: '',
+                    subject: '',
+                    fromEducation: '',
+                    toEducation: '',
+                    city: '',
+                  },
+                    i)
+              }
+              type="button">
                 Add
               </button>
-              <button onClick={deleteForm} type="button">
+              <button onClick={()=> deleteForm (setState, educations, arrayChild.id )} 
+              type="button">
                 Delete
-              </button> */}
+              </button> 
             </>)
           })}
         </form>

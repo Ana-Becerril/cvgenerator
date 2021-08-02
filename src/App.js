@@ -79,10 +79,10 @@ const App = () => {
 
 
   const deleteForm = (setState, form, i) => {
-    const arr = form.filter(element => element.id !== i-1);
-    for (let index = 1; index < arr.length; index++) {
-      const section = arr[index];
-      section.id = index;
+    const arr = form.filter(element => element.id !== i);
+      for (let index = 1; index < arr.length; index++) {
+        const section = arr[index];
+       section.id = index;
     }
     setState(arr);
     console.log(form)
@@ -120,15 +120,8 @@ const App = () => {
           handleInputChange={handleInputChangeEducations}
           educations={educations}
           setState={setEducations}
-          // deleteForm={() => deleteForm(setEducations,educations, {
-          //   university: '',
-          //   degree: '',
-          //   subject: '',
-          //   fromEducation: '',
-          //   toEducation: '',
-          //   city:'',
-          // })}
-          // 
+          addForm={addForm}
+          deleteForm={deleteForm}
            />
       </div>
       <CV

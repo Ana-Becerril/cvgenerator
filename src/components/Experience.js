@@ -16,7 +16,7 @@ const Experience = ({ handleInputChange, experiences, setState , deleteForm, add
               onChange={(e) => handleInputChange(e, experiences, i)}
               name="position"
               value={arrayChild.position}
-              key={"position" + i}
+              key={"position" + arrayChild.id}
 
             />
               <input
@@ -26,7 +26,7 @@ const Experience = ({ handleInputChange, experiences, setState , deleteForm, add
                 onChange={(e) => handleInputChange(e, experiences, i)}
                 name="company"
                 value={arrayChild.company}
-                key={"company" + i}
+                key={"company" + arrayChild.id}
 
 
               />
@@ -37,7 +37,7 @@ const Experience = ({ handleInputChange, experiences, setState , deleteForm, add
                 onChange={(e) => handleInputChange(e, experiences, i)}
                 name="from"
                 value={arrayChild.from}
-                key={"from" + i}
+                key={"from" + arrayChild.id}
 
 
               />
@@ -48,7 +48,7 @@ const Experience = ({ handleInputChange, experiences, setState , deleteForm, add
                 onChange={(e) => handleInputChange(e, experiences, i)}
                 name="to"
                 value={arrayChild.to}
-                key={"to" + i}
+                key={"to" + arrayChild.id}
 
 
               />
@@ -59,7 +59,7 @@ const Experience = ({ handleInputChange, experiences, setState , deleteForm, add
                 onChange={(e) => handleInputChange(e, experiences, i)}
                 name="activity"
                 value={arrayChild.activity}
-                key={"activity" + i}
+                key={"activity" + arrayChild.id}
 
 
               />
@@ -69,7 +69,7 @@ const Experience = ({ handleInputChange, experiences, setState , deleteForm, add
                 onChange={(e) => handleInputChange(e, experiences, i)}
                 name="achievement"
                 value={arrayChild.achievement}
-                key={"achievement" + i}
+                key={"achievement" + arrayChild.id}
 
 
               />
@@ -88,7 +88,7 @@ const Experience = ({ handleInputChange, experiences, setState , deleteForm, add
                 Add
               </button>
               <button 
-            onClick={()=> deleteForm (setState, experiences, i ) }
+            onClick={()=> deleteForm (setState, experiences, arrayChild.id ) }
               type="button">
                 Delete
               </button>
