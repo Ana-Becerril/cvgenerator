@@ -43,6 +43,8 @@ const App = () => {
     city:'',
   }])
 
+  const [files, setFiles] = useState("");
+
   const [chipsArr, setChips] = useState([]);
 
 
@@ -97,6 +99,7 @@ const App = () => {
         <Personal 
         handleInputChange={(e) => handleInputChange(e, setDatos, datos)} 
         datos={datos}
+        setFiles={setFiles}
          />
         <div className={styles.skillsContainer}>
           <form onSubmit={e => e.preventDefault}>
@@ -133,6 +136,7 @@ const App = () => {
         chipsArr={datos}
         experiences={experiences}
         educations={educations}
+        file={files}
    
         />
     </>

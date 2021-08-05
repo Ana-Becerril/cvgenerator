@@ -1,41 +1,31 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from '../App.module.css'
 
-const Personal = ({ handleInputChange, datos }) => {
+const Personal = ({ handleInputChange, datos, setFiles }) => {
 
-  const [file, setFile] = useState("")
-
-  const fileSelector = (e) => {
-    setFile(e.target.files);
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload=(e)=>{
-      console.log(e.target.result)
+  function previewFile() {
+    var file    = document.querySelector('input[type=file]').files[0];
+    var reader  = new FileReader();
+  
+    reader.onloadend = function () {
+      setFiles(reader.result);
     }
-  };
+  
+    if (file) {
+      reader.readAsDataURL(file);
+    } else {
+      setFiles("");
+    }
+  }
 
-  // function readImage(file) {
-  //   const reader = new FileReader();
-  //   reader.readAsDataURL(file);
-  //   reader.onload=(e)=>{
-  //     console.log(e.target.result)
-  //   }
-  // }
 
     return (
         <>
         <div className={styles.headerNameContainer}>
-          <form action="/action_page.php">
+          <form>
             <h1>Personal Information</h1>
-            <label for="img">Select image profile:</label>
-            <input 
-            type="file" 
-            name="file"   
-            id="img" 
-            accept="image/*" 
-            onChange={(e)=>fileSelector(e)}></input>
-            <img src="" height="200" alt="Image preview..."></img>
-            {/* <button type="button" onClick={()=>readImage(file)}>Submit</button> */}
+            <label for="img">Select image profile:</label> 
+            <input type="file" accept=".jpg, .jpeg, .png" onChange={previewFile}/>
 
             <input
               type="text"
