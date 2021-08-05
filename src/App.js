@@ -23,7 +23,7 @@ const App = () => {
 
   const [experiences, setExperiences] = useState(
     [{
-    id:0,
+    id:"",
     position: '',
     company: '',
     from: '',
@@ -34,7 +34,7 @@ const App = () => {
 
   const [educations, setEducations] = useState(
     [{
-    id:0,
+    id:"",
     university: '',
     degree: '',
     subject: '',
@@ -94,8 +94,10 @@ const App = () => {
     <>
       <Header />
       <div className={styles.formContainer}>
-        <Personal handleInputChange={(e) => handleInputChange(e, setDatos, datos)} 
-        datos={datos} />
+        <Personal 
+        handleInputChange={(e) => handleInputChange(e, setDatos, datos)} 
+        datos={datos}
+         />
         <div className={styles.skillsContainer}>
           <form onSubmit={e => e.preventDefault}>
             <h1>Soft Skills</h1>
@@ -130,7 +132,9 @@ const App = () => {
         datos={datos}
         chipsArr={datos}
         experiences={experiences}
-        educations={educations} />
+        educations={educations}
+   
+        />
     </>
   );
 };

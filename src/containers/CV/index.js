@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './style.module.css';
 
-const CV = ({ datos, chipsArr, experiences, educations }) => {
+const CV = ({ datos, chipsArr, experiences, educations, file }) => {
 
 
   return (
@@ -11,7 +11,7 @@ const CV = ({ datos, chipsArr, experiences, educations }) => {
           <div className={styles.page}>
             <div className={styles.mainContainers}>
               <div className={styles.headerNameContainer}>
-                <div className={styles.image}>{datos.picture}</div>
+                <img src={file} className={styles.image}/>{datos.picture}
                 <h1>{datos.firstName}</h1>
                 <h1>{datos.lastName}</h1>
                 <div className={styles.role}>{datos.role}</div>

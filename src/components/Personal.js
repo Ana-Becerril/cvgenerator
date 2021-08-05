@@ -1,29 +1,42 @@
-import React  from 'react';
+import React, {useState} from 'react';
 import styles from '../App.module.css'
-import { useForm } from "react-hook-form";
 
-const Personal = ({handleInputChange, datos}) => {
+const Personal = ({ handleInputChange, datos }) => {
 
-    const { register, handleSubmit } = useForm();
-  
-    const onSubmit = (data) => {
-      console.log(data);
-    };
+  const [file, setFile] = useState("")
 
+  const fileSelector = (e) => {
+    setFile(e.target.files);
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload=(e)=>{
+      console.log(e.target.result)
+    }
+  };
+
+  // function readImage(file) {
+  //   const reader = new FileReader();
+  //   reader.readAsDataURL(file);
+  //   reader.onload=(e)=>{
+  //     console.log(e.target.result)
+  //   }
+  // }
 
     return (
         <>
         <div className={styles.headerNameContainer}>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form action="/action_page.php">
             <h1>Personal Information</h1>
-            <input
-              type="file"
-              name="picture"
-              {...register("picture", {
-                required: "Required",
-              })}
-              />
-            <button>Submit</button>
+            <label for="img">Select image profile:</label>
+            <input 
+            type="file" 
+            name="file"   
+            id="img" 
+            accept="image/*" 
+            onChange={(e)=>fileSelector(e)}></input>
+            <img src="" height="200" alt="Image preview..."></img>
+            {/* <button type="button" onClick={()=>readImage(file)}>Submit</button> */}
+
             <input
               type="text"
               placeholder="First Name"

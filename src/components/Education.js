@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../App.module.css'
 
 const Education = ({ handleInputChange, educations, setState , deleteForm, addForm }) => {
-  console.log(educations)
 
   return (
     <>
