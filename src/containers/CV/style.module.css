@@ -60,6 +60,11 @@ body {
 
 }
 
+label{
+    font-family: 'Poppins-Ligth';
+    font-size: 18px;
+}
+
 
 .headerNameContainer{
     padding: 1cm;
@@ -77,11 +82,10 @@ body {
 }
 
 .image{
-    width: 80%;
-    height: 20%;
-    margin-bottom: 25px;
-    border: 1px white solid;
-    
+    width: 88%;
+    height: 21%;
+    margin-bottom: 20px;
+    border-radius: 50%;
 }
 
 h1{
