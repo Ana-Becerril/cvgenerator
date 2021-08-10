@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import CV from './containers/CV';
 import Header from './containers/Header'
 import styles from './App.module.css'
@@ -6,9 +6,10 @@ import Chips from 'react-chips'
 import Personal from './components/Personal';
 import Experience from './components/Experience'
 import Education from './components/Education'
-
+import {useReactToPrint}  from 'react-to-print';
 
 const App = () => {
+
   const [datos, setDatos] = useState({
     picture:'',
     firstname: '',
@@ -92,6 +93,12 @@ const App = () => {
     console.log(form)
   }
 
+  const componentRef = useRef();
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current
+  });
+
+
   return (
     <>
       <Header />
@@ -121,7 +128,7 @@ const App = () => {
           setState={setExperiences}
           addForm={addForm}
           deleteForm={deleteForm}
-          />
+        />
         <h1 className={styles.title}>Education/Certificates</h1>
         <Education
           handleInputChange={handleInputChangeEducations}
@@ -129,16 +136,27 @@ const App = () => {
           setState={setEducations}
           addForm={addForm}
           deleteForm={deleteForm}
-           />
+        />
       </div>
+      <div>
+      <button
+        type="button"
+        onClick={handlePrint}
+      >
+        {" "}
+        Print Resume{" "}
+      </button>
       <CV
         datos={datos}
         chipsArr={datos}
         experiences={experiences}
         educations={educations}
         file={files}
-   
-        />
+        ref={componentRef}
+      />
+      </div>
+
+
     </>
   );
 };

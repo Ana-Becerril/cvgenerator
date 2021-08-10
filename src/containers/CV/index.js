@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './style.module.css';
 
-const CV = ({ datos, chipsArr, experiences, educations, file }) => {
+const CV = React.forwardRef(( {datos, chipsArr, experiences, educations, file}, ref ) => {
 
 
   return (
     <>
       <div>
-        <div className={styles.formContainer}>
+        <div className={styles.formContainer} ref={ref}>
           <div className={styles.page}>
             <div className={styles.mainContainers}>
               <div className={styles.headerNameContainer}>
@@ -22,8 +22,6 @@ const CV = ({ datos, chipsArr, experiences, educations, file }) => {
                 <div>{datos.linkedin}</div>
               </div>
               <div className={styles.rightContainers}>
-
-
                 <div className={styles.skillsContainer}>
                   <h3> SOFT SKILLS</h3>
                   <ul className={styles.skillsList}>
@@ -73,6 +71,6 @@ const CV = ({ datos, chipsArr, experiences, educations, file }) => {
       </div>
     </>
   );
-};
+});
 
 export default CV;
