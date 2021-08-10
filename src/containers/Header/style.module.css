@@ -34,7 +34,7 @@ justify-content: center;
 
 @media only screen and (max-width: 570px) {
     .header{
-        width: 500px;
+        width: 550px;
         height: 95px;
     }
 

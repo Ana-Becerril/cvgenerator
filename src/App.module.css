@@ -86,15 +86,19 @@ button{
 
  @media only screen and (max-width: 570px) {
     .formContainer{
-        width: 445px;
+        width: 500px;
+        display: flex;
     }
 
     .headerNameContainer, .experienceContainer, .educationContainer, .skillsContainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 95%;
 }
 
+.titleContainer{
+    
+}
 
     } 

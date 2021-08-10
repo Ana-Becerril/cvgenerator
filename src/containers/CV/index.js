@@ -11,7 +11,7 @@ const CV = React.forwardRef(( {datos, chipsArr, experiences, educations, file}, 
           <div className={styles.page}>
             <div className={styles.mainContainers}>
               <div className={styles.headerNameContainer}>
-                <img src={file} className={styles.image}/>{datos.picture}
+                <img alt="Your picture" src={file} className={styles.image}/>{datos.picture}
                 <h1>{datos.firstName}</h1>
                 <h1>{datos.lastName}</h1>
                 <div className={styles.role}>{datos.role}</div>
