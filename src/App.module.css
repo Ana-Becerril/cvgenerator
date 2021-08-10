@@ -51,6 +51,24 @@ button{
     color: white;
     font-size: 20px;
     font-family: 'Poppins-Ligth';
-
 }
 
+.preview{
+    display: flex;
+    
+}
+
+.btnPrint{
+    background-color: #b828a4;
+    border: none;
+    border-radius: 10px;
+    margin: 4px;
+    height: 20px;
+    color: white;
+    font-size: 20px;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

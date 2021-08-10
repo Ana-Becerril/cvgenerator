@@ -6,7 +6,8 @@ import Chips from 'react-chips'
 import Personal from './components/Personal';
 import Experience from './components/Experience'
 import Education from './components/Education'
-import {useReactToPrint}  from 'react-to-print';
+import {useReactToPrint}  from 'react-to-print'
+
 
 const App = () => {
 
@@ -137,15 +138,16 @@ const App = () => {
           addForm={addForm}
           deleteForm={deleteForm}
         />
-      </div>
-      <div>
-      <button
+        <button
         type="button"
         onClick={handlePrint}
-      >
+        className={styles.btnPrint}
+        >
         {" "}
         Print Resume{" "}
       </button>
+      </div>
+      <div>
       <CV
         datos={datos}
         chipsArr={datos}
