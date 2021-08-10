@@ -31,3 +31,11 @@ justify-content: center;
     justify-content: center;
     margin: 12px;
 }
+
+@media only screen and (max-width: 570px) {
+    .header{
+        width: 500px;
+        height: 95px;
+    }
+
+}

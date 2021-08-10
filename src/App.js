@@ -7,6 +7,9 @@ import Personal from './components/Personal';
 import Experience from './components/Experience'
 import Education from './components/Education'
 import {useReactToPrint}  from 'react-to-print'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBriefcase, faGraduationCap, faStar, faUser } from '@fortawesome/free-solid-svg-icons';
+
 
 
 const App = () => {
@@ -104,14 +107,21 @@ const App = () => {
     <>
       <Header />
       <div className={styles.formContainer}>
+      <div className={styles.titleContainer}>
+      <FontAwesomeIcon icon={faUser} className={styles.icon}/>
+      <h1>Personal Information</h1>
+      </div>
         <Personal 
         handleInputChange={(e) => handleInputChange(e, setDatos, datos)} 
         datos={datos}
         setFiles={setFiles}
          />
+        <div className={styles.titleContainer}>
+        <FontAwesomeIcon icon={faStar} className={styles.icon}/>
+        <h1>Soft Skills</h1>
+        </div>
         <div className={styles.skillsContainer}>
           <form onSubmit={e => e.preventDefault}>
-            <h1>Soft Skills</h1>
             <Chips
               type="text"
               placeholder="Skills"
@@ -122,7 +132,10 @@ const App = () => {
             />
           </form>
         </div>
+        <div className={styles.titleContainer}>
+        <FontAwesomeIcon icon={faBriefcase} className={styles.icon}/>
         <h1 className={styles.title}>Experience</h1>
+        </div>
         <Experience
           handleInputChange={handleInputChangeExperiences}
           experiences={experiences}
@@ -130,7 +143,10 @@ const App = () => {
           addForm={addForm}
           deleteForm={deleteForm}
         />
+        <div className={styles.titleContainer}>
+        <FontAwesomeIcon icon={faGraduationCap} className={styles.icon}/>
         <h1 className={styles.title}>Education/Certificates</h1>
+        </div>
         <Education
           handleInputChange={handleInputChangeEducations}
           educations={educations}

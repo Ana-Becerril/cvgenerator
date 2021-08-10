@@ -20,6 +20,13 @@ body, html{
     width: 60%;
 }
 
+.titleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -27,8 +34,13 @@ form{
     padding-bottom: 20px;
 }
 
+.icon{
+font-size: 30px;
+}
+
 h1{
   font-family: 'Poppins-Ligth';
+  padding-left: 20px;
 
 }
 
@@ -38,7 +50,6 @@ input{
   margin: 4px 2px;
   font-size: 18px;
   font-family: 'Poppins-Ligth';
-  
 
 }
 
@@ -55,7 +66,7 @@ button{
 
 .preview{
     display: flex;
-    
+
 }
 
 .btnPrint{
@@ -72,3 +83,18 @@ button{
     justify-content: center;
     align-items: center;
 }
+
+ @media only screen and (max-width: 570px) {
+    .formContainer{
+        width: 445px;
+    }
+
+    .headerNameContainer, .experienceContainer, .educationContainer, .skillsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+
+    } 
