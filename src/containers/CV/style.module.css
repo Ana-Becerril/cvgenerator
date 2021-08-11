@@ -194,12 +194,10 @@ ul{
 
 @media screen and (max-width: 570px) {
     .page {
-          transform: scale(0.7);
+          transform: scale(0.5);
           margin-left: 200px;
     }
 
-    .image{
-        transform: scale(0.7);
-    }
+ 
 }
 
