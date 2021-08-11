@@ -24,7 +24,6 @@ body, html{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 26px;
 }
 
 form{
@@ -86,19 +85,33 @@ button{
 
  @media only screen and (max-width: 570px) {
     .formContainer{
-        width: 500px;
-        display: flex;
+        width: 300px;
+        margin-bottom: 100px;
     }
 
     .headerNameContainer, .experienceContainer, .educationContainer, .skillsContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 95%;
+        width: 300px;
 }
 
-.titleContainer{
-    
+h1{
+font-size: 15px;
+padding-left: 5px;
+
 }
+
+.icon{
+    font-size: 18px;
+}
+
+input{
+    padding: 5px 0; 
+    text-decoration: none;
+    margin: 4px 2px;
+    font-size: 18px;
+    font-family: 'Poppins-Ligth';
+  
+  }
+
+
 
     } 

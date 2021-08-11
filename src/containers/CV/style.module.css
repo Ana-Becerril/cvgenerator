@@ -192,3 +192,14 @@ ul{
     padding: 0;
 }
 
+@media screen and (max-width: 570px) {
+    .page {
+          transform: scale(0.7);
+          margin-left: 200px;
+    }
+
+    .image{
+        transform: scale(0.7);
+    }
+}
+
