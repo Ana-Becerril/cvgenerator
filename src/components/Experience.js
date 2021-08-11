@@ -32,7 +32,7 @@ const Experience = ({ handleInputChange, experiences, setState , deleteForm, add
               />
               <input
 
-                type="text"
+                type="number"
                 placeholder="From"
                 onChange={(e) => handleInputChange(e, experiences, i)}
                 name="from"
@@ -43,7 +43,7 @@ const Experience = ({ handleInputChange, experiences, setState , deleteForm, add
               />
               <input
 
-                type="text"
+                type="number"
                 placeholder="To"
                 onChange={(e) => handleInputChange(e, experiences, i)}
                 name="to"

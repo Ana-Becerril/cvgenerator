@@ -28,7 +28,7 @@ const Education = ({ handleInputChange, educations, setState , deleteForm, addFo
               />
               <input
 
-                type="text"
+                type="number"
                 placeholder="From"
                 onChange={(e) => handleInputChange(e, educations, i)}
                 name="fromEducation"
@@ -37,7 +37,7 @@ const Education = ({ handleInputChange, educations, setState , deleteForm, addFo
               />
               <input
 
-                type="text"
+                type="number "
                 placeholder="To"
                 onChange={(e) => handleInputChange(e, educations, i)}
                 name="toEducation"
@@ -76,7 +76,6 @@ const Education = ({ handleInputChange, educations, setState , deleteForm, addFo
             </>)
           })}
         </form>
-
       </div>
     </>
   )
