@@ -198,6 +198,11 @@ ul{
           transform: scale(0.5);
    }
 
+   .headerNameContainer{
+    width: 100%;    
+   }
+
+
  
 }
 
