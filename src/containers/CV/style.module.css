@@ -72,8 +72,8 @@ label {
     width: 37%;
     color: seashell;
     font-size: 12px;
-    background: rgb(54, 176, 160);
-    background: linear-gradient(180deg, rgba(54, 176, 160, 1) 63%, rgba(0, 0, 0, 0) 100%);
+    background: rgb(66,191,175);
+    background: linear-gradient(180deg, rgba(66,191,175,1) 53%, rgba(255,255,255,1) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;

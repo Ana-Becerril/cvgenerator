@@ -49,7 +49,6 @@ const App = () => {
   }])
 
   const [files, setFiles] = useState("");
-
   const [chipsArr, setChips] = useState([]);
 
 
@@ -159,8 +158,8 @@ const App = () => {
         onClick={handlePrint}
         className={styles.btnPrint}
         >
-        {" "}
-        Print Resume{" "}
+        <span>
+        Print Resume</span>
       </button>
       </div>
       <div>

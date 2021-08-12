@@ -24,8 +24,12 @@ const Personal = ({ handleInputChange, datos, setFiles }) => {
         <div className={styles.headerNameContainer}>
           <form>
             <label for="img">Select a profile picture:</label> 
-            <input type="file" accept=".jpg, .jpeg, .png" onChange={previewFile}/>
+            <input 
+            type="file" 
+            accept=".jpg, .jpeg, .png" 
+            onChange={previewFile}
 
+            />
             <input
               type="text"
               placeholder="First Name"

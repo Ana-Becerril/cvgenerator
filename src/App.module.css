@@ -82,7 +82,37 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 7px #999;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    transition: all 0.5s;
+    cursor: pointer;
 }
+
+.btnPrint span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .btnPrint span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .btnPrint:hover span {
+    padding-right: 25px;
+  }
+  
+  .btnPrint:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
 @media screen and (min-width:571px) and (max-width: 906px) {
     .formContainer {
