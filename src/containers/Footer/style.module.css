@@ -31,3 +31,23 @@ margin-left: 50px;
 .icon:hover {
     color: #886CE4;
   }
+
+
+  @media only screen and (max-width: 570px) {
+    .footerContainer {
+        width: 100%;
+        height: 80px;
+        font-size: 16px;
+    }
+
+    .iconsContainer{
+        margin-left: 10px;
+        }
+        
+    .icon{
+        font-size: 40px;
+        margin: 7px;
+        color: white;
+    }
+        
+}

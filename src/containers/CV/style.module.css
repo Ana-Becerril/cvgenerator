@@ -17,7 +17,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
 .page {
@@ -202,6 +201,9 @@ ul {
 }
 
 @media screen and (max-width: 570px) {
+    .formContainer {
+        height: 100vh;
+    }    
     .page {
         transform: scale(0.5);
     }
