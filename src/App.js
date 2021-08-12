@@ -6,6 +6,7 @@ import Chips from 'react-chips'
 import Personal from './components/Personal';
 import Experience from './components/Experience'
 import Education from './components/Education'
+import Footer from './containers/Footer'
 import {useReactToPrint}  from 'react-to-print'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase, faGraduationCap, faStar, faUser } from '@fortawesome/free-solid-svg-icons';
@@ -162,7 +163,7 @@ const App = () => {
         Print Resume</span>
       </button>
       </div>
-      <div>
+      <div className={styles.footer}>
       <CV
         datos={datos}
         chipsArr={datos}
@@ -171,9 +172,8 @@ const App = () => {
         file={files}
         ref={componentRef}
       />
+      <Footer/>
       </div>
-
-
     </>
   );
 };

@@ -13,7 +13,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 250px;
+    margin-bottom: 15px;
     text-align: start;
 }
 
@@ -70,7 +70,7 @@ button {
 }
 
 .btnPrint {
-    background-color: #b828a4;
+    background-color:#886CE4;
     border: none;
     border-radius: 10px;
     margin: 4px;
@@ -112,6 +112,11 @@ button {
   .btnPrint:hover span:after {
     opacity: 1;
     right: 0;
+  }
+
+  .footer{
+      display: flex;
+      flex-direction: column;
   }
 
 @media screen and (min-width:571px) and (max-width: 906px) {

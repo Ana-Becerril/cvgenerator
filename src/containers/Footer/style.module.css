@@ -1,0 +1,33 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.footerContainer{
+width: 100%;
+height: 95px;
+background: #62ccbe;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'Poppins-Ligth';
+color: white;
+font-size: 24px;
+
+}
+
+.iconsContainer{
+margin-left: 50px;
+}
+
+.icon{
+    font-size: 45px;
+    margin: 10px;
+    color: white;
+}
+
+.icon:hover {
+    color: #886CE4;
+  }
