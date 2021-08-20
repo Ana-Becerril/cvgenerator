@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+## 📃🧾 CV Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project focuses on creating a small CV application that generates a resume while the user fills out a form.
 
-## Available Scripts
+## 🧮 The Project Brief
 
-In the project directory, you can run:
+The specifications and the guide to the project can be found The Odin Project's 'Library Project' page.
 
-### `yarn start`
+The premise of this project is to use functional components and lifting up state of React, as well as the rendering of lists in forms
+to create a CV generator. This application allows the user to create and modify their own resume. The changes that the user makes are displayed in real time.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🖼️ Preview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🧬 Technologies & Languages Used
+- CSS
+- HTML
+- JavaScript
+- React (functional components)
+- Hooks
 
-### `yarn test`
+## 🔰 Setup & Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ⌨️ Local 
 
-### `yarn build`
+1. Go to the [repository](https://github.com/Ana-Becerril/cvgenerator) and press on the green button that says ```code```
+2. Copy the link and open a terminal 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    windows:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```windows tab + x ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    mac: Press ```CmdSpace``` to open spotlight search and type ```terminal``` and hit ```return ```.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Go to the folder where you gonna clone the repositorie and type ```git clone PASTE THE LINK``` and hit ```Enter ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Go the the project root and type ``` yarn/npm run start ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🚀 Live version
+[visit the page](https://cvgenerator3000.netlify.app/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## 🧫🔬 Testing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Donwload the project.
+2. open a terminal and run ```npm test ```.
+3. Check the output.
+## 🛎️ Contributions, Issues & Forking
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you want to make your own changes, modifications or improvements to our project, go ahead and Fork it!
+1. [Fork it](https://github.com/Ana-Becerril/cvgenerator/fork)
+2. Create your working branch (git checkout -b [choose-a-name])
+3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
+4. Push to the branch (git push origin [chosen-name])
+5. Create a new Pull Request
 
-### Code Splitting
+## 👩‍💻 🦄 Creator
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Ana Becerril - [Github](https://github.com/Ana-Becerril)
 
-### Analyzing the Bundle Size
+## 💚 Show Your Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Give a ⭐️ if you like this project!
